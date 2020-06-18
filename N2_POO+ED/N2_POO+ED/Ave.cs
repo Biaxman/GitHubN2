@@ -8,7 +8,13 @@ namespace N2_POO_ED
 {
     class Ave : Animal
     {
-        public bool Rapina { get; set; } = false;
+        private bool rapina = false;
+        public bool Rapina
+        {
+            get =>rapina;
+            set => rapina = value;
+
+        }
         public virtual void Ciscar()
         { }
         public string CorPena { get; set; }

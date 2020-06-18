@@ -8,8 +8,13 @@ namespace N2_POO_ED
 {
     class Mamifero : Animal
     {
+        private bool temPelos = false;
         public int QtdeMamas { get; set; }
-        public bool TemPelos { get; set; } = false;
+        public bool TemPelos
+        {
+            get => temPelos;
+            set => temPelos = value;
+        }
         public string CorPelo { get; set; }
 
     }

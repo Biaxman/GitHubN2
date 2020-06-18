@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace N2_POO_ED
 {
-    class Animal
-
+    public abstract class Animal
     {
         public string Nome { get; set; }
         public DateTime DatadeNascimento { get; set; }

@@ -8,7 +8,18 @@ namespace N2_POO_ED
 {
     class Reptil : Animal
     {
-        public bool TemEscamas { get; set; } = false;
-        public bool TemCasco { get; set; } = false;
+        private bool temEscamas = false;
+        private bool temCasco = false;
+        public bool TemEscamas
+        {
+            get => temEscamas;
+            set => temEscamas = value;
+        }
+        public bool TemCasco
+        {
+            get => temCasco;
+            set => temCasco = value;
+        }
+
     }
 }
