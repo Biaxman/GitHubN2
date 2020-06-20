@@ -8,6 +8,7 @@ namespace N2_POO_ED.Classes_dos_Animais
 {
     class Cachorro : Mamifero, IPredador
     {
+
         public Cachorro()
         {
             QtdeMamas = 10;
