@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animais\Baleia.cs" />
+    <Compile Include="Animais\Coruja.cs" />
+    <Compile Include="Animais\Gaviao.cs" />
+    <Compile Include="Animais\Leao.cs" />
+    <Compile Include="Animais\Pinguim.cs" />
+    <Compile Include="Animais\Pombo.cs" />
     <Compile Include="Animal.cs" />
     <Compile Include="Animais\Pato.cs" />
     <Compile Include="Familia\Ave.cs" />
