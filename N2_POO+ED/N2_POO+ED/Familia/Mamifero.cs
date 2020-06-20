@@ -9,7 +9,6 @@ namespace N2_POO_ED
     class Mamifero : Animal
     {
         private bool temPelos = false;
-        public enum cor {  }
         public int QtdeMamas { get; set; }
         public bool TemPelos
         {
