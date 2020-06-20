@@ -49,6 +49,11 @@
   <ItemGroup>
     <Compile Include="Animal.cs" />
     <Compile Include="Ave.cs" />
+    <Compile Include="Classes dos Animais\Cachorro.cs" />
+    <Compile Include="Classes dos Animais\Coala.cs" />
+    <Compile Include="Classes dos Animais\BeijaFlor.cs" />
+    <Compile Include="Classes dos Animais\Gato.cs" />
+    <Compile Include="Classes dos Animais\Morcego.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
