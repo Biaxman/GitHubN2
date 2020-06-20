@@ -55,6 +55,8 @@
     <Compile Include="Animais\Pombo.cs" />
     <Compile Include="Animal.cs" />
     <Compile Include="Animais\Pato.cs" />
+    <Compile Include="Estrutura de Dados\ListaAnimais.cs" />
+    <Compile Include="Estrutura de Dados\NodoAnimal.cs" />
     <Compile Include="Familia\Ave.cs" />
     <Compile Include="Animais\Cachorro.cs" />
     <Compile Include="Animais\Coala.cs" />
