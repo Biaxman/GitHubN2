@@ -8,8 +8,12 @@ namespace N2_POO_ED.Animais
 {
     class Leao: Mamifero, IPredador
     {
-        public Leao()
+        public Leao(string nome, DateTime data, char sexo)
         {
+            Nome = nome;
+            DatadeNascimento = data;
+            Sexo = sexo;
+            Carnivoro = true;
             QtdeMamas = 8;
             TemPelos = true;
             CorPelo = "Laranja";

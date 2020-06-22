@@ -8,8 +8,12 @@ namespace N2_POO_ED.Animais
 {
     class Gaviao : Ave, IVoar , IPredador
     {
-        public Gaviao()
+        public Gaviao(string nome, DateTime data, char sexo)
         {
+            Nome = nome;
+            DatadeNascimento = data;
+            Sexo = sexo;
+            Carnivoro = true;
             Ciscar();
             Rapina = true;
             CorPena = "Cinza";

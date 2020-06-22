@@ -8,8 +8,11 @@ namespace N2_POO_ED.Classes_dos_Animais
 {
     class Morcego : Mamifero, IVoar
     {
-        public Morcego()
+        public Morcego(string nome, DateTime data, char sexo)
         {
+            Nome = nome;
+            DatadeNascimento = data;
+            Sexo = sexo;
             QtdeMamas = 2;
             TemPelos = true;
             CorPelo = "Preta";

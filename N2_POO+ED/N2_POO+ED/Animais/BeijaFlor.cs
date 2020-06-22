@@ -8,10 +8,12 @@ namespace N2_POO_ED.Classes_dos_Animais
 {
     class BeijaFlor : Ave, IVoar, IOviparo
     {
-        public BeijaFlor()
+        public BeijaFlor(string nome, DateTime data, char sexo)
         {
+            Nome = nome;
+            DatadeNascimento = data;
+            Sexo = sexo;
             Ciscar();
-            Rapina = false;
             CorPena = "Azul";
         }
 

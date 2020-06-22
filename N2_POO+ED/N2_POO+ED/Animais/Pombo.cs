@@ -8,10 +8,13 @@ namespace N2_POO_ED.Animais
 {
     class Pombo: Ave, IOviparo, IVoar 
     {
-        public Pombo()
+        public Pombo(string nome, DateTime data, char sexo)
         {
+            Nome = nome;
+            DatadeNascimento = data;
+            Sexo = sexo;
+            Carnivoro = true;
             Ciscar();
-            Rapina = false;
             CorPena = "Cinza";
         }
 

@@ -8,10 +8,12 @@ namespace N2_POO_ED.Animais
 {
     class Pinguim : Ave, IOviparo, IAquatico
     {
-        public Pinguim()
+        public Pinguim(string nome, DateTime data, char sexo)
         {
+            Nome = nome;
+            DatadeNascimento = data;
+            Sexo = sexo;
             Ciscar();
-            Rapina = false;
             CorPena = "Azul";
         }
 

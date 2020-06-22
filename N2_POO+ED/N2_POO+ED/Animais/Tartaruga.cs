@@ -9,9 +9,11 @@ namespace N2_POO_ED.Animais
     class Tartaruga : Reptil, IAquatico, IOviparo
     {
 
-        public Tartaruga()
+        public Tartaruga(string nome, DateTime data, char sexo)
         {
-            TemEscamas = true;
+            Nome = nome;
+            DatadeNascimento = data;
+            Sexo = sexo;
             TemCasco = true;
         }
 

@@ -8,8 +8,11 @@ namespace N2_POO_ED.Classes_dos_Animais
 {
     class Pato: Ave, IOviparo, IVoar
     {
-        public Pato()
+        public Pato(string nome, DateTime data, char sexo)
         {
+            Nome = nome;
+            DatadeNascimento = data;
+            Sexo = sexo;
             CorPena = "Branco";
         }
         public void Botar()

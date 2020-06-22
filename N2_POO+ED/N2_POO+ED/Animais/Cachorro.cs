@@ -8,9 +8,12 @@ namespace N2_POO_ED.Classes_dos_Animais
 {
     class Cachorro : Mamifero, IPredador
     {
-
-        public Cachorro()
+        public Cachorro(string nome, DateTime data, char sexo)
         {
+            Nome = nome;
+            DatadeNascimento = data;
+            Sexo = sexo;
+            Carnivoro = true;
             QtdeMamas = 10;
             TemPelos = true;
             CorPelo = "Marrom";

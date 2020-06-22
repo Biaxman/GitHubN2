@@ -8,11 +8,12 @@ namespace N2_POO_ED.Animais
 {
     class Baleia: Mamifero, IAquatico
     {
-        public Baleia()
+        public Baleia(string nome, DateTime data, char sexo)
         {
+            Nome = nome;
+            DatadeNascimento = data;
+            Sexo = sexo;
             QtdeMamas = 8;
-            TemPelos = true;
-            CorPelo = "Laranja";
         }
 
         public bool ViveEmTerra

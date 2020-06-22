@@ -8,8 +8,12 @@ namespace N2_POO_ED.Classes_dos_Animais
 {
     class Gato : Mamifero, IPredador
     {
-        public Gato()
+        public Gato(string nome, DateTime data, char sexo)
         {
+            Nome = nome;
+            DatadeNascimento = data;
+            Sexo = sexo;
+            Carnivoro = true;
             QtdeMamas = 8;
             TemPelos = true;
             CorPelo = "Marrom";

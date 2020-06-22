@@ -8,8 +8,12 @@ namespace N2_POO_ED.Animais
 {
     class Ornitorrinco : Mamifero, IAquatico, IOviparo
     {
-        public Ornitorrinco()
+        public Ornitorrinco(string nome, DateTime data, char sexo)
         {
+            Nome = nome;
+            DatadeNascimento = data;
+            Sexo = sexo;
+            Peconhento = true;
             QtdeMamas = 0;
             TemPelos = true;
             CorPelo = "Marrom";
