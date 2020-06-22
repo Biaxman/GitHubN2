@@ -9,8 +9,8 @@ namespace N2_POO_ED.Estrutura_de_Dados
 {
     class ListaAnimais
     {
-        public NodoAnimal primeiro = null;      
-        public NodoAnimal ultimo = null;        
+        public NodoAnimal primeiro = null;
+        public NodoAnimal ultimo = null;
         int qtde = 0;
 
         private void InserirNaPosicao(NodoAnimal anterior, Animal valor)
@@ -62,6 +62,20 @@ namespace N2_POO_ED.Estrutura_de_Dados
                 InserirNaPosicao(aux, valor);
             }
         }
-       
+
+        public bool Pesquisar(string nome)
+        {
+            NodoAnimal aux = primeiro;
+            while (aux.Proximo != null)
+            {
+                if (aux.Dado.Nome == nome)
+                {
+                    return true;
+                }
+                aux = aux.Proximo;
+            }
+            return false;
+        }
     }
+
 }

@@ -43,7 +43,6 @@ namespace N2_POO_ED
                 MessageBox.Show("Data Inválida!");
             }
 
-            for
 
             string nome = txtNome.Text;
             char sexo = 'F';
