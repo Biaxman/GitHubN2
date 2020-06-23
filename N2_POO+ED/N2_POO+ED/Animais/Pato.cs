@@ -10,6 +10,7 @@ namespace N2_POO_ED.Classes_dos_Animais
     {
         private int altMaxMetros;
         private double velocidadeVoo;
+
         private bool viveEmTerra;
         private bool mergulho;
         private bool aguaDoce;
@@ -35,26 +36,28 @@ namespace N2_POO_ED.Classes_dos_Animais
         {
             Console.WriteLine("voa");
         }
+
         public int AltMaxMetros
         {
             get
             {
-                return AltMaxMetros;
+                return altMaxMetros;
             }
             set
             {
-                AltMaxMetros = value;
+                altMaxMetros = value;
             }
         }
+
         public double VelocidadeVoo
         {
             get
             {
-                return VelocidadeVoo;
+                return velocidadeVoo;
             }
             set
             {
-                VelocidadeVoo = value;
+                velocidadeVoo = value;
             }
         }
 

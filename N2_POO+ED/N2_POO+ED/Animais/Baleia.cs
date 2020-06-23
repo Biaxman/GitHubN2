@@ -15,11 +15,9 @@ namespace N2_POO_ED.Animais
 
         public Baleia(string nome, DateTime data, char sexo)
         {
-            Nome = nome;
-            DatadeNascimento = data;
-            Sexo = sexo;
+
             ViveEmTerra = false;
-            Mergulho = false;
+            Mergulho = true;
             AguaDoce = false;
             QtdeMamas = 8;
         }
@@ -28,23 +26,23 @@ namespace N2_POO_ED.Animais
         {
             get
             {
-                return ViveEmTerra;
+                return viveEmTerra;
             }
-
             set
             {
-                ViveEmTerra = false;
+                viveEmTerra = value;
             }
         }
+
         public bool Mergulho
         {
             get
             {
-                return Mergulho;
+                return mergulho;
             }
             set
             {
-                Mergulho = true;
+                mergulho = value;
             }
         }
 
@@ -52,11 +50,11 @@ namespace N2_POO_ED.Animais
         {
             get
             {
-                return AguaDoce;
+                return aguaDoce;
             }
             set
             {
-                AguaDoce = false;
+                aguaDoce = value;
             }
         }
     }

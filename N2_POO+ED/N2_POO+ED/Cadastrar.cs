@@ -51,84 +51,106 @@ namespace N2_POO_ED
 
             string animal = cbxEspecie.Text;
 
-
-
-            switch (animal)
+            try
             {
-                case "Baleia":
-                    Baleia baleia = new Baleia(nome, data, sexo);
-                    arvore.Insere(baleia);
-                    break;
+                switch (animal)
+                {
+                    case "Baleia":
+                        Baleia baleia = new Baleia(nome, data, sexo);
+                        arvore.Insere(baleia);
+                        break;
 
-                case "BeijaFlor":
-                    BeijaFlor beijaFlor = new BeijaFlor(nome, data, sexo);
-                    arvore.Insere(beijaFlor);
-                    break;
+                    case "BeijaFlor":
+                        BeijaFlor beijaFlor = new BeijaFlor(nome, data, sexo);
+                        arvore.Insere(beijaFlor);
+                        break;
 
-                case "Cachorro":
-                    Cachorro cachorro = new Cachorro(nome, data, sexo);
-                    arvore.Insere(cachorro);
-                    break;
+                    case "Cachorro":
+                        Cachorro cachorro = new Cachorro(nome, data, sexo);
+                        arvore.Insere(cachorro);
+                        break;
 
-                case "Coala":
-                    Coala coala = new Coala(nome, data, sexo);
-                    arvore.Insere(coala);
-                    break;
+                    case "Coala":
+                        Coala coala = new Coala(nome, data, sexo);
+                        arvore.Insere(coala);
+                        break;
 
-                case "Coruja":
-                    Coruja coruja = new Coruja(nome, data, sexo);
-                    arvore.Insere(coruja);
-                    break;
+                    case "Coruja":
+                        Coruja coruja = new Coruja(nome, data, sexo);
+                        arvore.Insere(coruja);
+                        break;
 
-                case "Gato":
-                    Gato gato = new Gato(nome, data, sexo);
-                    arvore.Insere(gato);
-                    break;
+                    case "Gato":
+                        Gato gato = new Gato(nome, data, sexo);
+                        arvore.Insere(gato);
+                        break;
 
-                case "Gaviao":
-                    Gaviao gaviao = new Gaviao(nome, data, sexo);
-                    arvore.Insere(gaviao);
-                    break;
+                    case "Gaviao":
+                        Gaviao gaviao = new Gaviao(nome, data, sexo);
+                        arvore.Insere(gaviao);
+                        break;
 
-                case "Leao":
-                    Leao Leao = new Leao(nome, data, sexo);
-                    arvore.Insere(Leao);
-                    break;
+                    case "Leao":
+                        Leao Leao = new Leao(nome, data, sexo);
+                        arvore.Insere(Leao);
+                        break;
 
-                case "Morcego":
-                    Morcego morcego = new Morcego(nome, data, sexo);
-                    arvore.Insere(morcego);
-                    break;
+                    case "Morcego":
+                        Morcego morcego = new Morcego(nome, data, sexo);
+                        arvore.Insere(morcego);
+                        break;
 
-                case "Ornitorrinco":
-                    Ornitorrinco ornitorrinco = new Ornitorrinco(nome, data, sexo);
-                    arvore.Insere(ornitorrinco);
-                    break;
+                    case "Ornitorrinco":
+                        Ornitorrinco ornitorrinco = new Ornitorrinco(nome, data, sexo);
+                        arvore.Insere(ornitorrinco);
+                        break;
 
-                case "Pato":
-                    Pato pato = new Pato(nome, data, sexo);
-                    arvore.Insere(pato);
-                    break;
+                    case "Pato":
+                        Pato pato = new Pato(nome, data, sexo);
+                        arvore.Insere(pato);
+                        break;
 
-                case "Pinguim":
-                    Pinguim pinguim = new Pinguim(nome, data, sexo);
-                    arvore.Insere(pinguim);
-                    break;
+                    case "Pinguim":
+                        Pinguim pinguim = new Pinguim(nome, data, sexo);
+                        arvore.Insere(pinguim);
+                        break;
 
-                case "Pombo":
-                    Pombo pombo = new Pombo(nome, data, sexo);
-                    arvore.Insere(pombo);
-                    break;
+                    case "Pombo":
+                        Pombo pombo = new Pombo(nome, data, sexo);
+                        arvore.Insere(pombo);
+                        break;
 
-                case "Tartaruga":
-                    Tartaruga tartaruga = new Tartaruga(nome, data, sexo);
-                    arvore.Insere(tartaruga);
-                    break;
+                    case "Tartaruga":
+                        Tartaruga tartaruga = new Tartaruga(nome, data, sexo);
+                        arvore.Insere(tartaruga);
+                        break;
 
-                default:
-                    break;
+                    default:
+                        break;
+                }
             }
+            catch (Exception)
+            {
+                MessageBox.Show("Já existe um animal com esse nome!");
+            }
+            
+            
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtTest.Text = arvore.ListagemEmOrdem();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            txtTest.Text = arvore.ListarCategoria("Mamifero");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            txtTest.Text = arvore.ListarInterface("IOviparo");
         }
 
         //public int PesquisaBinaria(string nome)

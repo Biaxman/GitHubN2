@@ -27,12 +27,12 @@ namespace N2_POO_ED.Animais
             {
                 return viveEmTerra;
             }
-
             set
             {
-                viveEmTerra = false;
+                viveEmTerra = value;
             }
         }
+
         public bool Mergulho
         {
             get
@@ -41,7 +41,7 @@ namespace N2_POO_ED.Animais
             }
             set
             {
-                mergulho = true;
+                mergulho = value;
             }
         }
 
@@ -53,10 +53,9 @@ namespace N2_POO_ED.Animais
             }
             set
             {
-                aguaDoce = true;
+                aguaDoce = value;
             }
         }
-
         public void Botar()
         {
             Console.WriteLine("Botou um ovo");

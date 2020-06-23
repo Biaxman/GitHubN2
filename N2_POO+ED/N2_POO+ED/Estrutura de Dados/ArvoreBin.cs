@@ -47,8 +47,34 @@ namespace N2_POO_ED.Estrutura_de_Dados
             if (no.EhExterno())
                 return;
             PercursoInterfixado(no.GetNoEsquerda());
-            resultado = resultado + " - " + Convert.ToInt32(no.GetValor());
+            resultado = resultado + " - " + no.GetValor().Nome;
             PercursoInterfixado(no.GetNoDireita());
+        }
+
+        private void PesquisarPorCategoria(Nodo no, string categoria)
+        {
+            if (no.EhExterno())
+                return;
+            PesquisarPorCategoria(no.GetNoEsquerda(), categoria);
+            if (no.GetValor().GetType().BaseType.Name == categoria)
+                resultado = resultado + " - " + no.GetValor().Nome;
+            PesquisarPorCategoria(no.GetNoDireita(), categoria);
+        }
+
+        private void PesquisarPorInterface(Nodo no, string tipo)
+        {
+            if (no.EhExterno())
+                return;
+            PesquisarPorInterface(no.GetNoEsquerda(), tipo);
+            object[] test = no.GetValor().GetType().GetInterfaces();
+            for (int i = 0; i < test.Length - 1; i++)
+            {
+                string a = test[i].ToString();
+                string b = a.Substring(a.IndexOf('.') + 1);
+                if(b == tipo)
+                    resultado = resultado + " - " + no.GetValor().Nome;
+            }
+            PesquisarPorInterface(no.GetNoDireita(),tipo);
         }
 
         public string ListagemEmOrdem()
@@ -56,6 +82,22 @@ namespace N2_POO_ED.Estrutura_de_Dados
             resultado = "";
             if (qtdeNodosInternos != 0)
                 PercursoInterfixado(raiz);
+            return resultado;
+        }
+
+        public string ListarCategoria(string categoria)
+        {
+            resultado = "";
+            if (qtdeNodosInternos != 0)
+                PesquisarPorCategoria(raiz, categoria);
+            return resultado;
+        }
+
+        public string ListarInterface(string tipo)
+        {
+            resultado = "";
+            if (qtdeNodosInternos != 0)
+                PesquisarPorInterface(raiz, tipo);
             return resultado;
         }
 
