@@ -23,6 +23,9 @@ namespace N2_POO_ED.Classes_dos_Animais
             CorPena = "Branco";
             AltMaxMetros = 1200;
             VelocidadeVoo = 52;
+            ViveEmTerra = true;
+            Mergulho = true;
+            AguaDoce = true;
         }
         public void Botar()
         {

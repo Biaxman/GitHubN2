@@ -19,6 +19,9 @@ namespace N2_POO_ED.Animais
             Sexo = sexo;
             Ciscar();
             CorPena = "Azul";
+            ViveEmTerra = true;
+            Mergulho = true;
+            AguaDoce = false;
         }
 
         public bool ViveEmTerra

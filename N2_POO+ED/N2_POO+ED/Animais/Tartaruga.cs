@@ -18,6 +18,9 @@ namespace N2_POO_ED.Animais
             DatadeNascimento = data;
             Sexo = sexo;
             TemCasco = true;
+            ViveEmTerra = true;
+            Mergulho = true;
+            AguaDoce = false;
         }
 
         public bool ViveEmTerra
