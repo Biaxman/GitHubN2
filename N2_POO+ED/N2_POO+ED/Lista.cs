@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using N2_POO_ED.Estrutura_de_Dados;
 
-namespace N2_POO_ED.Estrutura_de_Dados
+namespace N2_POO_ED
 {
-    class ListaAnimais
+    class Lista
     {
         public NodoAnimal primeiro = null;
         public NodoAnimal ultimo = null;
@@ -62,25 +61,5 @@ namespace N2_POO_ED.Estrutura_de_Dados
                 InserirNaPosicao(aux, valor);
             }
         }
-
-        public bool Pesquisar(string nome)
-        {
-            NodoAnimal aux = primeiro;
-            while (aux.Proximo != null)
-            {
-                if (aux.Dado.Nome == nome)
-                {
-                    return true;
-                }
-                aux = aux.Proximo;
-            }
-            return false;
-        }
-
-        public int RetornarQuantidade()
-        {
-            return qtde;
-        }
     }
-
 }

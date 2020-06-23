@@ -78,7 +78,9 @@
     <Compile Include="Cadastrar.Designer.cs">
       <DependentUpon>Cadastrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Estrutura de Dados\ArvoreBin.cs" />
     <Compile Include="Estrutura de Dados\ListaAnimais.cs" />
+    <Compile Include="Estrutura de Dados\Nodo.cs" />
     <Compile Include="Estrutura de Dados\NodoAnimal.cs" />
     <Compile Include="Familia\Ave.cs" />
     <Compile Include="Animais\Cachorro.cs" />
