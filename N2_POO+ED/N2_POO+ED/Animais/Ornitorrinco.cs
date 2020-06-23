@@ -8,6 +8,10 @@ namespace N2_POO_ED.Animais
 {
     class Ornitorrinco : Mamifero, IAquatico, IOviparo
     {
+        private bool viveEmTerra;
+        private bool mergulho;
+        private bool aguaDoce;
+
         public Ornitorrinco(string nome, DateTime data, char sexo)
         {
             Nome = nome;
@@ -17,28 +21,31 @@ namespace N2_POO_ED.Animais
             QtdeMamas = 0;
             TemPelos = true;
             CorPelo = "Marrom";
+            ViveEmTerra = true;
+            Mergulho = true;
+            AguaDoce = true;
         }
         public bool ViveEmTerra
         {
             get
             {
-                return ViveEmTerra;
+                return viveEmTerra;
             }
 
             set
             {
-                ViveEmTerra = false;
+                viveEmTerra = false;
             }
         }
         public bool Mergulho
         {
             get
             {
-                return Mergulho;
+                return mergulho;
             }
             set
             {
-                Mergulho = true;
+                mergulho = true;
             }
         }
 
@@ -46,11 +53,11 @@ namespace N2_POO_ED.Animais
         {
             get
             {
-                return AguaDoce;
+                return aguaDoce;
             }
             set
             {
-                AguaDoce = true;
+                aguaDoce = true;
             }
         }
 

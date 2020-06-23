@@ -8,6 +8,8 @@ namespace N2_POO_ED.Animais
 {
     class Pombo: Ave, IOviparo, IVoar 
     {
+        private int altMaxMetros;
+        private double velocidadeVoo;
         public Pombo(string nome, DateTime data, char sexo)
         {
             Nome = nome;
@@ -16,17 +18,19 @@ namespace N2_POO_ED.Animais
             Carnivoro = true;
             Ciscar();
             CorPena = "Cinza";
+            AltMaxMetros = 200;
+            VelocidadeVoo = 20;
         }
 
         public int AltMaxMetros
         {
             get
             {
-                return AltMaxMetros;
+                return altMaxMetros;
             }
             set
             {
-                AltMaxMetros = value;
+                altMaxMetros = value;
             }
         }
 
@@ -34,11 +38,11 @@ namespace N2_POO_ED.Animais
         {
             get
             {
-                return VelocidadeVoo;
+                return velocidadeVoo;
             }
             set
             {
-                VelocidadeVoo = value;
+                velocidadeVoo = value;
             }
         }
 

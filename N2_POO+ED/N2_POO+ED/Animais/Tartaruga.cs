@@ -8,6 +8,9 @@ namespace N2_POO_ED.Animais
 {
     class Tartaruga : Reptil, IAquatico, IOviparo
     {
+        private bool viveEmTerra;
+        private bool mergulho;
+        private bool aguaDoce;
 
         public Tartaruga(string nome, DateTime data, char sexo)
         {
@@ -21,23 +24,23 @@ namespace N2_POO_ED.Animais
         {
             get
             {
-                return ViveEmTerra;
+                return viveEmTerra;
             }
 
             set
             {
-                ViveEmTerra = false;
+                viveEmTerra = false;
             }
         }
         public bool Mergulho
         {
             get
             {
-                return Mergulho;
+                return mergulho;
             }
             set
             {
-                Mergulho = true;
+                mergulho = true;
             }
         }
 
@@ -45,11 +48,11 @@ namespace N2_POO_ED.Animais
         {
             get
             {
-                return AguaDoce;
+                return aguaDoce;
             }
             set
             {
-                AguaDoce = false;
+                aguaDoce = true;
             }
         }
 

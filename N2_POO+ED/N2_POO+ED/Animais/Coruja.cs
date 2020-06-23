@@ -8,6 +8,9 @@ namespace N2_POO_ED.Animais
 {
     class Coruja : Ave, IVoar, IOviparo, IPredador
     {
+        private int altMaxMetros;
+        private double velocidadeVoo;
+
         public Coruja(string nome, DateTime data, char sexo)
         {
             Nome = nome;
@@ -17,16 +20,19 @@ namespace N2_POO_ED.Animais
             Ciscar();
             Rapina = true;
             CorPena = "Cinza";
+            AltMaxMetros = 200;
+            VelocidadeVoo = 20;
         }
+
         public int AltMaxMetros
         {
             get
             {
-                return AltMaxMetros;
+                return altMaxMetros;
             }
             set
             {
-                AltMaxMetros = value;
+                altMaxMetros = value;
             }
         }
 
@@ -34,11 +40,11 @@ namespace N2_POO_ED.Animais
         {
             get
             {
-                return VelocidadeVoo;
+                return velocidadeVoo;
             }
             set
             {
-                VelocidadeVoo = value;
+                velocidadeVoo = value;
             }
         }
 

@@ -8,6 +8,9 @@ namespace N2_POO_ED.Classes_dos_Animais
 {
     class BeijaFlor : Ave, IVoar, IOviparo
     {
+        private int altMaxMetros;
+        private double velocidadeVoo;
+
         public BeijaFlor(string nome, DateTime data, char sexo)
         {
             Nome = nome;
@@ -15,17 +18,19 @@ namespace N2_POO_ED.Classes_dos_Animais
             Sexo = sexo;
             Ciscar();
             CorPena = "Azul";
+            AltMaxMetros = 200;
+            VelocidadeVoo = 20;
         }
 
         public int AltMaxMetros
         {
             get
             {
-                return AltMaxMetros;
+                return altMaxMetros;
             }
             set
             {
-                AltMaxMetros = value;
+                altMaxMetros = value;
             }
         }
 
@@ -33,11 +38,11 @@ namespace N2_POO_ED.Classes_dos_Animais
         {
             get
             {
-                return VelocidadeVoo;
+                return velocidadeVoo;
             }
             set
             {
-                VelocidadeVoo = value;
+                velocidadeVoo = value;
             }
         }
 
