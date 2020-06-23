@@ -18,8 +18,8 @@ namespace N2_POO_ED.Animais
             Carnivoro = true;
             Ciscar();
             CorPena = "Cinza";
-            AltMaxMetros = 200;
-            VelocidadeVoo = 20;
+            AltMaxMetros = 2400;
+            VelocidadeVoo = 102;
         }
 
         public int AltMaxMetros

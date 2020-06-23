@@ -18,8 +18,8 @@ namespace N2_POO_ED.Classes_dos_Animais
             Sexo = sexo;
             Ciscar();
             CorPena = "Azul";
-            AltMaxMetros = 200;
-            VelocidadeVoo = 20;
+            AltMaxMetros = 3000;
+            VelocidadeVoo = 79;
         }
 
         public int AltMaxMetros

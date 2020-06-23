@@ -21,8 +21,8 @@ namespace N2_POO_ED.Classes_dos_Animais
             DatadeNascimento = data;
             Sexo = sexo;
             CorPena = "Branco";
-            AltMaxMetros = 200;
-            VelocidadeVoo = 20;
+            AltMaxMetros = 1200;
+            VelocidadeVoo = 52;
         }
         public void Botar()
         {

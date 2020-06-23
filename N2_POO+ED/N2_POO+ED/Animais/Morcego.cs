@@ -18,8 +18,8 @@ namespace N2_POO_ED.Classes_dos_Animais
             QtdeMamas = 2;
             TemPelos = true;
             CorPelo = "Preta";
-            AltMaxMetros = 200;
-            VelocidadeVoo = 20;
+            AltMaxMetros = 15;
+            VelocidadeVoo = 150;
         }
 
         public int AltMaxMetros

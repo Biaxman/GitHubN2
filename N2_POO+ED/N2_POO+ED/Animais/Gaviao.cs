@@ -20,8 +20,8 @@ namespace N2_POO_ED.Animais
             Ciscar();
             Rapina = true;
             CorPena = "Cinza";
-            AltMaxMetros = 200;
-            VelocidadeVoo = 20;
+            AltMaxMetros = 2400;
+            VelocidadeVoo = 320;
         }
 
         public int AltMaxMetros

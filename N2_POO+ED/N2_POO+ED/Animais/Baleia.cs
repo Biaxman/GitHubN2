@@ -18,6 +18,7 @@ namespace N2_POO_ED.Animais
 
             ViveEmTerra = false;
             Mergulho = true;
+            Carnivoro = true;
             AguaDoce = false;
             QtdeMamas = 8;
         }
