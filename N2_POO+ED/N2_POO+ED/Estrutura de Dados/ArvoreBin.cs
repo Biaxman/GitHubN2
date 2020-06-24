@@ -47,7 +47,10 @@ namespace N2_POO_ED.Estrutura_de_Dados
             if (no.EhExterno())
                 return;
             PercursoInterfixado(no.GetNoEsquerda());
-            resultado = resultado + " - " + no.GetValor().Nome;
+            if (resultado == "")
+                resultado = no.GetValor().Nome;
+            else
+                resultado = resultado + "|" + no.GetValor().Nome;
             PercursoInterfixado(no.GetNoDireita());
         }
 
@@ -58,7 +61,10 @@ namespace N2_POO_ED.Estrutura_de_Dados
                 return;
             PesquisarMamifero(no.GetNoEsquerda());
             if (no.GetValor().GetType().BaseType.Name == "Mamifero")
-                resultado = resultado + " - " + no.GetValor().Nome;
+                if (resultado == "")
+                    resultado = no.GetValor().Nome;
+                else
+                    resultado = resultado + "|" + no.GetValor().Nome;
             PesquisarMamifero(no.GetNoDireita());
         }
 
@@ -73,7 +79,10 @@ namespace N2_POO_ED.Estrutura_de_Dados
                 string a = InterfacesVet[i].ToString();
                 string b = a.Substring(a.IndexOf('.') + 1);
                 if(b == tipo)
-                    resultado = resultado + " - " + no.GetValor().Nome;
+                    if (resultado == "")
+                        resultado = no.GetValor().Nome;
+                    else
+                        resultado = resultado + "|" + no.GetValor().Nome;
             }
             PesquisarPorInterface(no.GetNoDireita(),tipo);
         }

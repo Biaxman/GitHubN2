@@ -50,7 +50,14 @@
             this.rdbTodos = new System.Windows.Forms.RadioButton();
             this.btnListar = new System.Windows.Forms.Button();
             this.btnTodos = new System.Windows.Forms.Button();
+            this.cbxListagem = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -182,7 +189,7 @@
             // 
             // txtTest
             // 
-            this.txtTest.Location = new System.Drawing.Point(343, 174);
+            this.txtTest.Location = new System.Drawing.Point(343, 227);
             this.txtTest.Multiline = true;
             this.txtTest.Name = "txtTest";
             this.txtTest.Size = new System.Drawing.Size(326, 188);
@@ -296,11 +303,60 @@
             this.btnTodos.UseVisualStyleBackColor = true;
             this.btnTodos.Click += new System.EventHandler(this.btnTodos_Click);
             // 
+            // cbxListagem
+            // 
+            this.cbxListagem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxListagem.FormattingEnabled = true;
+            this.cbxListagem.IntegralHeight = false;
+            this.cbxListagem.Location = new System.Drawing.Point(343, 174);
+            this.cbxListagem.Name = "cbxListagem";
+            this.cbxListagem.Size = new System.Drawing.Size(196, 21);
+            this.cbxListagem.TabIndex = 7;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Location = new System.Drawing.Point(364, 249);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(100, 69);
+            this.groupBox2.TabIndex = 20;
+            this.groupBox2.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Imagem Animal";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Location = new System.Drawing.Point(364, 324);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(290, 79);
+            this.groupBox3.TabIndex = 21;
+            this.groupBox3.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 30);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(99, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Informações Animal";
+            // 
             // Cadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.cbxListagem);
             this.Controls.Add(this.btnTodos);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.rdbTodos);
@@ -317,6 +373,10 @@
             this.Text = "Cadastrar";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,5 +406,10 @@
         private System.Windows.Forms.RadioButton rdbTodos;
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.Button btnTodos;
+        private System.Windows.Forms.ComboBox cbxListagem;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label6;
     }
 }

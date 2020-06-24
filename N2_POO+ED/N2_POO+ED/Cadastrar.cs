@@ -133,8 +133,8 @@ namespace N2_POO_ED
             {
                 MessageBox.Show("Já existe um animal com esse nome!");
             }
-            
-            
+
+
 
         }
 
@@ -157,20 +157,56 @@ namespace N2_POO_ED
 
         }
 
+        public string VerificarPesquisaInterface(string FiltroPesquisa)
+        {
+
+            if (rdbOviparo.Checked)
+                FiltroPesquisa = "IOviparo";
+            else if (rdbAquatico.Checked)
+                FiltroPesquisa = "IAquatico";
+            else if (rdbVoador.Checked)
+                FiltroPesquisa = "IVoar";
+            else if (rdbPredador.Checked)
+                FiltroPesquisa = "IPredador";
+            else
+                FiltroPesquisa = "";
+
+            return FiltroPesquisa;
+        }
+
         private void btnListar_Click(object sender, EventArgs e)
         {
+            string FiltroPesquisa = "";
+            cbxListagem.Items.Clear();
+            string[] resposta = new string[0];
+
             if (rdbMamifero.Checked)
-                txtTest.Text = arvore.ListarMamifero();
-            else if (rdbOviparo.Checked)
-                txtTest.Text = arvore.ListarInterface("IOviparo");
-            else if(rdbAquatico.Checked)
-                txtTest.Text = arvore.ListarInterface("IAquatico");
-            else if (rdbVoador.Checked)
-                txtTest.Text = arvore.ListarInterface("IVoar");
-            else if (rdbPredador.Checked)
-                txtTest.Text = arvore.ListarInterface("IPredador");
-            else if (rdbAlfabetico.Checked)
-                txtTest.Text = arvore.ListagemEmOrdem();
+            {
+                resposta = arvore.ListarMamifero().Split('|');
+                foreach (string x in resposta)
+                {
+                    cbxListagem.Items.Add(x);
+                }
+            }
+           
+
+            else if (VerificarPesquisaInterface(FiltroPesquisa) != "")
+            {
+                resposta = arvore.ListarInterface(FiltroPesquisa).Split('|');
+                foreach (string x in resposta)
+                {
+                    cbxListagem.Items.Add(x);
+                }
+
+            }
+            else if (rdbAlfabetico.Checked || rdbTodos.Checked)
+            {
+                resposta = arvore.ListagemEmOrdem().Split('|');
+                foreach (string x in resposta)
+                {
+                    cbxListagem.Items.Add(x);
+                }
+            }
 
         }
 
@@ -219,7 +255,7 @@ namespace N2_POO_ED
             arvore.Insere(beijaFlor);
 
 
-
+            btnTodos.Enabled = false;
         }
 
 
