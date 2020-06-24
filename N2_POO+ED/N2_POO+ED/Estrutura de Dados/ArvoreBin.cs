@@ -57,12 +57,8 @@ namespace N2_POO_ED.Estrutura_de_Dados
             if (no.EhExterno())
                 return;
             PesquisarMamifero(no.GetNoEsquerda());
-            object x = no.GetValor().GetType();
             if (no.GetValor().GetType().BaseType.Name == "Mamifero")
-            {
                 resultado = resultado + " - " + no.GetValor().Nome;
-                
-            }
             PesquisarMamifero(no.GetNoDireita());
         }
 
@@ -71,10 +67,10 @@ namespace N2_POO_ED.Estrutura_de_Dados
             if (no.EhExterno())
                 return;
             PesquisarPorInterface(no.GetNoEsquerda(), tipo);
-            object[] test = no.GetValor().GetType().GetInterfaces();
-            for (int i = 0; i < test.Length; i++)
+            object[] InterfacesVet = no.GetValor().GetType().GetInterfaces();
+            for (int i = 0; i < InterfacesVet.Length; i++)
             {
-                string a = test[i].ToString();
+                string a = InterfacesVet[i].ToString();
                 string b = a.Substring(a.IndexOf('.') + 1);
                 if(b == tipo)
                     resultado = resultado + " - " + no.GetValor().Nome;
