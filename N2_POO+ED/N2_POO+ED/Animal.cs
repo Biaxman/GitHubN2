@@ -35,7 +35,7 @@ namespace N2_POO_ED
         { }
 
         public virtual int Idade (DateTime DatadeNascimento)
-        {
+        {     
             int idade = DateTime.Now.Year - DatadeNascimento.Year;
             if(DateTime.Now.DayOfYear < DatadeNascimento.DayOfYear)
             {

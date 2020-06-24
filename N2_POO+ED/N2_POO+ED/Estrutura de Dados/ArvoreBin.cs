@@ -51,14 +51,19 @@ namespace N2_POO_ED.Estrutura_de_Dados
             PercursoInterfixado(no.GetNoDireita());
         }
 
-        private void PesquisarPorCategoria(Nodo no, string categoria)
+        private void PesquisarMamifero(Nodo no)
         {
+
             if (no.EhExterno())
                 return;
-            PesquisarPorCategoria(no.GetNoEsquerda(), categoria);
-            if (no.GetValor().GetType().BaseType.Name == categoria)
+            PesquisarMamifero(no.GetNoEsquerda());
+            object x = no.GetValor().GetType();
+            if (no.GetValor().GetType().BaseType.Name == "Mamifero")
+            {
                 resultado = resultado + " - " + no.GetValor().Nome;
-            PesquisarPorCategoria(no.GetNoDireita(), categoria);
+                
+            }
+            PesquisarMamifero(no.GetNoDireita());
         }
 
         private void PesquisarPorInterface(Nodo no, string tipo)
@@ -67,7 +72,7 @@ namespace N2_POO_ED.Estrutura_de_Dados
                 return;
             PesquisarPorInterface(no.GetNoEsquerda(), tipo);
             object[] test = no.GetValor().GetType().GetInterfaces();
-            for (int i = 0; i < test.Length - 1; i++)
+            for (int i = 0; i < test.Length; i++)
             {
                 string a = test[i].ToString();
                 string b = a.Substring(a.IndexOf('.') + 1);
@@ -85,11 +90,11 @@ namespace N2_POO_ED.Estrutura_de_Dados
             return resultado;
         }
 
-        public string ListarCategoria(string categoria)
+        public string ListarMamifero()
         {
             resultado = "";
             if (qtdeNodosInternos != 0)
-                PesquisarPorCategoria(raiz, categoria);
+                PesquisarMamifero(raiz);
             return resultado;
         }
 

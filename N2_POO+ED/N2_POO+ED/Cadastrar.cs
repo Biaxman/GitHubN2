@@ -32,10 +32,10 @@ namespace N2_POO_ED
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            DateTime data = DateTime.Now;
+            DateTime dataNascimento = DateTime.Now;
             try
             {
-                DateTime test = Convert.ToDateTime(txtDataNascimento.Text);
+                dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
 
             }
             catch (Exception)
@@ -56,72 +56,72 @@ namespace N2_POO_ED
                 switch (animal)
                 {
                     case "Baleia":
-                        Baleia baleia = new Baleia(nome, data, sexo);
+                        Baleia baleia = new Baleia(nome, dataNascimento, sexo);
                         arvore.Insere(baleia);
                         break;
 
-                    case "BeijaFlor":
-                        BeijaFlor beijaFlor = new BeijaFlor(nome, data, sexo);
+                    case "Beija-flor":
+                        BeijaFlor beijaFlor = new BeijaFlor(nome, dataNascimento, sexo);
                         arvore.Insere(beijaFlor);
                         break;
 
                     case "Cachorro":
-                        Cachorro cachorro = new Cachorro(nome, data, sexo);
+                        Cachorro cachorro = new Cachorro(nome, dataNascimento, sexo);
                         arvore.Insere(cachorro);
                         break;
 
                     case "Coala":
-                        Coala coala = new Coala(nome, data, sexo);
+                        Coala coala = new Coala(nome, dataNascimento, sexo);
                         arvore.Insere(coala);
                         break;
 
                     case "Coruja":
-                        Coruja coruja = new Coruja(nome, data, sexo);
+                        Coruja coruja = new Coruja(nome, dataNascimento, sexo);
                         arvore.Insere(coruja);
                         break;
 
                     case "Gato":
-                        Gato gato = new Gato(nome, data, sexo);
+                        Gato gato = new Gato(nome, dataNascimento, sexo);
                         arvore.Insere(gato);
                         break;
 
-                    case "Gaviao":
-                        Gaviao gaviao = new Gaviao(nome, data, sexo);
+                    case "Gavião":
+                        Gaviao gaviao = new Gaviao(nome, dataNascimento, sexo);
                         arvore.Insere(gaviao);
                         break;
 
-                    case "Leao":
-                        Leao Leao = new Leao(nome, data, sexo);
+                    case "Leão":
+                        Leao Leao = new Leao(nome, dataNascimento, sexo);
                         arvore.Insere(Leao);
                         break;
 
                     case "Morcego":
-                        Morcego morcego = new Morcego(nome, data, sexo);
+                        Morcego morcego = new Morcego(nome, dataNascimento, sexo);
                         arvore.Insere(morcego);
                         break;
 
                     case "Ornitorrinco":
-                        Ornitorrinco ornitorrinco = new Ornitorrinco(nome, data, sexo);
+                        Ornitorrinco ornitorrinco = new Ornitorrinco(nome, dataNascimento, sexo);
                         arvore.Insere(ornitorrinco);
                         break;
 
                     case "Pato":
-                        Pato pato = new Pato(nome, data, sexo);
+                        Pato pato = new Pato(nome, dataNascimento, sexo);
                         arvore.Insere(pato);
                         break;
 
                     case "Pinguim":
-                        Pinguim pinguim = new Pinguim(nome, data, sexo);
+                        Pinguim pinguim = new Pinguim(nome, dataNascimento, sexo);
                         arvore.Insere(pinguim);
                         break;
 
                     case "Pombo":
-                        Pombo pombo = new Pombo(nome, data, sexo);
+                        Pombo pombo = new Pombo(nome, dataNascimento, sexo);
                         arvore.Insere(pombo);
                         break;
 
                     case "Tartaruga":
-                        Tartaruga tartaruga = new Tartaruga(nome, data, sexo);
+                        Tartaruga tartaruga = new Tartaruga(nome, dataNascimento, sexo);
                         arvore.Insere(tartaruga);
                         break;
 
@@ -140,18 +140,88 @@ namespace N2_POO_ED
 
         private void button1_Click(object sender, EventArgs e)
         {
-            txtTest.Text = arvore.ListagemEmOrdem();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            txtTest.Text = arvore.ListarCategoria("Mamifero");
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
             txtTest.Text = arvore.ListarInterface("IOviparo");
+            //if(rdbMamifero.Checked || rdbOviparo.Checked)
+            //{
+            //    string categoria = "IOviparo";
+            //    if(rdbMamifero.Checked)
+            //        categoria = "Mamifero";
+            //    arvore.ListarCategoria(categoria);
+            //}
+
+
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            if (rdbMamifero.Checked)
+                txtTest.Text = arvore.ListarMamifero();
+            else if (rdbOviparo.Checked)
+                txtTest.Text = arvore.ListarInterface("IOviparo");
+            else if(rdbAquatico.Checked)
+                txtTest.Text = arvore.ListarInterface("IAquatico");
+            else if (rdbVoador.Checked)
+                txtTest.Text = arvore.ListarInterface("IVoar");
+            else if (rdbPredador.Checked)
+                txtTest.Text = arvore.ListarInterface("IPredador");
+            else if (rdbAlfabetico.Checked)
+                txtTest.Text = arvore.ListagemEmOrdem();
+
+        }
+
+        private void btnTodos_Click(object sender, EventArgs e)
+        {
+            Baleia baleia = new Baleia("baleia", DateTime.Now, 'F');
+            arvore.Insere(baleia);
+
+            Tartaruga tartaruga = new Tartaruga("tartaruga", DateTime.Now, 'F');
+            arvore.Insere(tartaruga);
+
+            Pombo pombo = new Pombo("pombo", DateTime.Now, 'F');
+            arvore.Insere(pombo);
+
+            Pinguim pinguim = new Pinguim("pinguim", DateTime.Now, 'F');
+            arvore.Insere(pinguim);
+
+            Pato pato = new Pato("pato", DateTime.Now, 'F');
+            arvore.Insere(pato);
+
+            Ornitorrinco ornitorrinco = new Ornitorrinco("ornitorrinco", DateTime.Now, 'F');
+            arvore.Insere(ornitorrinco);
+
+            Morcego morcego = new Morcego("morcego", DateTime.Now, 'F');
+            arvore.Insere(morcego);
+
+            Leao Leao = new Leao("Leao", DateTime.Now, 'F');
+            arvore.Insere(Leao);
+
+            Gaviao gaviao = new Gaviao("gaviao", DateTime.Now, 'F');
+            arvore.Insere(gaviao);
+
+            Gato gato = new Gato("gato", DateTime.Now, 'F');
+            arvore.Insere(gato);
+
+            Coruja coruja = new Coruja("coruja", DateTime.Now, 'F');
+            arvore.Insere(coruja);
+
+            Coala coala = new Coala("coala", DateTime.Now, 'F');
+            arvore.Insere(coala);
+
+            Cachorro cachorro = new Cachorro("cachorro", DateTime.Now, 'F');
+            arvore.Insere(cachorro);
+
+            BeijaFlor beijaFlor = new BeijaFlor("beijaFlor", DateTime.Now, 'F');
+            arvore.Insere(beijaFlor);
+
+
+
+        }
+
 
         //public int PesquisaBinaria(string nome)
         //{

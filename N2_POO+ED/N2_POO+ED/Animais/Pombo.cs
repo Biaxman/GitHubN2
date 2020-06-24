@@ -20,6 +20,7 @@ namespace N2_POO_ED.Animais
             CorPena = "Cinza";
             AltMaxMetros = 2400;
             VelocidadeVoo = 102;
+            Idade(data);
         }
 
         public int AltMaxMetros

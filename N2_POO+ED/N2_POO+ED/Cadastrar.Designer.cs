@@ -40,9 +40,16 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtTest = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.rdbMamifero = new System.Windows.Forms.RadioButton();
+            this.rdbOviparo = new System.Windows.Forms.RadioButton();
+            this.rdbAquatico = new System.Windows.Forms.RadioButton();
+            this.rdbVoador = new System.Windows.Forms.RadioButton();
+            this.rdbIdade = new System.Windows.Forms.RadioButton();
+            this.rdbAlfabetico = new System.Windows.Forms.RadioButton();
+            this.rdbPredador = new System.Windows.Forms.RadioButton();
+            this.rdbTodos = new System.Windows.Forms.RadioButton();
+            this.btnListar = new System.Windows.Forms.Button();
+            this.btnTodos = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,22 +120,23 @@
             // 
             // cbxEspecie
             // 
+            this.cbxEspecie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxEspecie.FormattingEnabled = true;
             this.cbxEspecie.Items.AddRange(new object[] {
-            "Gato",
-            "Cachorro",
-            "Morcego",
-            "Pato",
-            "Pombo",
-            "Ornitorrinco",
-            "Tartaruga",
             "Baleia",
-            "Pinguim",
+            "Beija-flor",
+            "Cachorro",
+            "Coala",
             "Coruja",
+            "Gato",
             "Gavião",
             "Leão",
-            "Beija-flor",
-            "Coala"});
+            "Morcego",
+            "Ornitorrinco",
+            "Pato",
+            "Pinguim",
+            "Pombo",
+            "Tartaruga"});
             this.cbxEspecie.Location = new System.Drawing.Point(131, 120);
             this.cbxEspecie.Name = "cbxEspecie";
             this.cbxEspecie.Size = new System.Drawing.Size(121, 21);
@@ -174,50 +182,135 @@
             // 
             // txtTest
             // 
-            this.txtTest.Location = new System.Drawing.Point(350, 24);
+            this.txtTest.Location = new System.Drawing.Point(343, 174);
             this.txtTest.Multiline = true;
             this.txtTest.Name = "txtTest";
             this.txtTest.Size = new System.Drawing.Size(326, 188);
             this.txtTest.TabIndex = 7;
             // 
-            // button1
+            // rdbMamifero
             // 
-            this.button1.Location = new System.Drawing.Point(682, 26);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Listar Ordem";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.rdbMamifero.AutoSize = true;
+            this.rdbMamifero.Location = new System.Drawing.Point(343, 32);
+            this.rdbMamifero.Name = "rdbMamifero";
+            this.rdbMamifero.Size = new System.Drawing.Size(68, 17);
+            this.rdbMamifero.TabIndex = 10;
+            this.rdbMamifero.TabStop = true;
+            this.rdbMamifero.Text = "Mamifero";
+            this.rdbMamifero.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // rdbOviparo
             // 
-            this.button2.Location = new System.Drawing.Point(682, 58);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Listar Mamifero";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.rdbOviparo.AutoSize = true;
+            this.rdbOviparo.Location = new System.Drawing.Point(343, 75);
+            this.rdbOviparo.Name = "rdbOviparo";
+            this.rdbOviparo.Size = new System.Drawing.Size(62, 17);
+            this.rdbOviparo.TabIndex = 11;
+            this.rdbOviparo.TabStop = true;
+            this.rdbOviparo.Text = "Oviparo";
+            this.rdbOviparo.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // rdbAquatico
             // 
-            this.button3.Location = new System.Drawing.Point(682, 92);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(121, 23);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Listar Voador";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.rdbAquatico.AutoSize = true;
+            this.rdbAquatico.Location = new System.Drawing.Point(546, 34);
+            this.rdbAquatico.Name = "rdbAquatico";
+            this.rdbAquatico.Size = new System.Drawing.Size(67, 17);
+            this.rdbAquatico.TabIndex = 12;
+            this.rdbAquatico.TabStop = true;
+            this.rdbAquatico.Text = "Aquatico";
+            this.rdbAquatico.UseVisualStyleBackColor = true;
+            // 
+            // rdbVoador
+            // 
+            this.rdbVoador.AutoSize = true;
+            this.rdbVoador.Location = new System.Drawing.Point(445, 34);
+            this.rdbVoador.Name = "rdbVoador";
+            this.rdbVoador.Size = new System.Drawing.Size(59, 17);
+            this.rdbVoador.TabIndex = 13;
+            this.rdbVoador.TabStop = true;
+            this.rdbVoador.Text = "Voador";
+            this.rdbVoador.UseVisualStyleBackColor = true;
+            // 
+            // rdbIdade
+            // 
+            this.rdbIdade.AutoSize = true;
+            this.rdbIdade.Location = new System.Drawing.Point(343, 119);
+            this.rdbIdade.Name = "rdbIdade";
+            this.rdbIdade.Size = new System.Drawing.Size(52, 17);
+            this.rdbIdade.TabIndex = 14;
+            this.rdbIdade.TabStop = true;
+            this.rdbIdade.Text = "Idade";
+            this.rdbIdade.UseVisualStyleBackColor = true;
+            // 
+            // rdbAlfabetico
+            // 
+            this.rdbAlfabetico.AutoSize = true;
+            this.rdbAlfabetico.Location = new System.Drawing.Point(541, 75);
+            this.rdbAlfabetico.Name = "rdbAlfabetico";
+            this.rdbAlfabetico.Size = new System.Drawing.Size(72, 17);
+            this.rdbAlfabetico.TabIndex = 15;
+            this.rdbAlfabetico.TabStop = true;
+            this.rdbAlfabetico.Text = "Alfabética";
+            this.rdbAlfabetico.UseVisualStyleBackColor = true;
+            // 
+            // rdbPredador
+            // 
+            this.rdbPredador.AutoSize = true;
+            this.rdbPredador.Location = new System.Drawing.Point(445, 75);
+            this.rdbPredador.Name = "rdbPredador";
+            this.rdbPredador.Size = new System.Drawing.Size(68, 17);
+            this.rdbPredador.TabIndex = 16;
+            this.rdbPredador.TabStop = true;
+            this.rdbPredador.Text = "Predador";
+            this.rdbPredador.UseVisualStyleBackColor = true;
+            // 
+            // rdbTodos
+            // 
+            this.rdbTodos.AutoSize = true;
+            this.rdbTodos.Location = new System.Drawing.Point(445, 119);
+            this.rdbTodos.Name = "rdbTodos";
+            this.rdbTodos.Size = new System.Drawing.Size(94, 17);
+            this.rdbTodos.TabIndex = 17;
+            this.rdbTodos.TabStop = true;
+            this.rdbTodos.Text = "Todos Animais";
+            this.rdbTodos.UseVisualStyleBackColor = true;
+            // 
+            // btnListar
+            // 
+            this.btnListar.Location = new System.Drawing.Point(709, 27);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(75, 23);
+            this.btnListar.TabIndex = 18;
+            this.btnListar.Text = "button1";
+            this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            // 
+            // btnTodos
+            // 
+            this.btnTodos.Location = new System.Drawing.Point(12, 249);
+            this.btnTodos.Name = "btnTodos";
+            this.btnTodos.Size = new System.Drawing.Size(75, 23);
+            this.btnTodos.TabIndex = 19;
+            this.btnTodos.Text = "Todos";
+            this.btnTodos.UseVisualStyleBackColor = true;
+            this.btnTodos.Click += new System.EventHandler(this.btnTodos_Click);
             // 
             // Cadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnTodos);
+            this.Controls.Add(this.btnListar);
+            this.Controls.Add(this.rdbTodos);
+            this.Controls.Add(this.rdbPredador);
+            this.Controls.Add(this.rdbAlfabetico);
+            this.Controls.Add(this.rdbIdade);
+            this.Controls.Add(this.rdbVoador);
+            this.Controls.Add(this.rdbAquatico);
+            this.Controls.Add(this.rdbOviparo);
+            this.Controls.Add(this.rdbMamifero);
             this.Controls.Add(this.txtTest);
             this.Controls.Add(this.groupBox1);
             this.Name = "Cadastrar";
@@ -243,8 +336,15 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.TextBox txtTest;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.RadioButton rdbMamifero;
+        private System.Windows.Forms.RadioButton rdbOviparo;
+        private System.Windows.Forms.RadioButton rdbAquatico;
+        private System.Windows.Forms.RadioButton rdbVoador;
+        private System.Windows.Forms.RadioButton rdbIdade;
+        private System.Windows.Forms.RadioButton rdbAlfabetico;
+        private System.Windows.Forms.RadioButton rdbPredador;
+        private System.Windows.Forms.RadioButton rdbTodos;
+        private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.Button btnTodos;
     }
 }

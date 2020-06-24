@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace N2_POO_ED.Animais
 {
-    class Baleia: Mamifero, IAquatico
+    class Baleia: Mamifero, IAquatico, IPredador
     {
         private bool viveEmTerra;
         private bool mergulho;
@@ -15,7 +15,9 @@ namespace N2_POO_ED.Animais
 
         public Baleia(string nome, DateTime data, char sexo)
         {
-
+            Nome = nome;
+            DatadeNascimento = data;
+            Sexo = sexo;
             ViveEmTerra = false;
             Mergulho = true;
             AguaDoce = false;
@@ -57,6 +59,11 @@ namespace N2_POO_ED.Animais
             {
                 aguaDoce = value;
             }
+        }
+
+        public void Ataque()
+        {
+            Console.WriteLine("Atacar");
         }
     }
 }
