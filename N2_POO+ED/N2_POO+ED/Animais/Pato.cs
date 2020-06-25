@@ -26,6 +26,7 @@ namespace N2_POO_ED.Classes_dos_Animais
             ViveEmTerra = true;
             Mergulho = true;
             AguaDoce = true;
+
         }
         public void Botar()
         {

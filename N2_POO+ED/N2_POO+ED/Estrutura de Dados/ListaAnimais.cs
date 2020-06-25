@@ -52,7 +52,10 @@ namespace N2_POO_ED.Estrutura_de_Dados
         public void InserirNoFim(Animal valor)
         {
             if (qtde == 0)
+            {
+                primeiro = null;
                 InserirNoInicio(valor);
+            }
             else
             {
                 NodoAnimal aux = primeiro;

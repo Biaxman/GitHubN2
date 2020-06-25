@@ -11,10 +11,13 @@ namespace N2_POO_ED.Estrutura_de_Dados
         private Nodo raiz = null; // raiz da árvore
         private int qtdeNodosInternos = 0; // qtde de nos internos
         private string resultado = ""; // utilizada na listagem dos nodos
+        private int contadorVetAnimal = 0;
         public int QtdeNodosInternos() 
         {
             return qtdeNodosInternos;
         }
+
+        ListaAnimais lista = new ListaAnimais();
 
         public void Insere(Animal valor) // insere um valor int
         {
@@ -87,6 +90,37 @@ namespace N2_POO_ED.Estrutura_de_Dados
             PesquisarPorInterface(no.GetNoDireita(),tipo);
         }
 
+        private void PesquisarPorIdade(Nodo no, Animal[]vet)
+        {
+            if (no.EhExterno())
+                return;
+            PesquisarPorIdade(no.GetNoEsquerda(),vet);
+            vet[contadorVetAnimal++] = no.GetValor();
+            PesquisarPorIdade(no.GetNoDireita(),vet);
+        }
+
+        public Animal[] ListarPorIdade()
+        {
+            Animal[] vetAnimais = new Animal[qtdeNodosInternos];
+            contadorVetAnimal = 0;
+            PesquisarPorIdade(raiz,vetAnimais);
+
+            for (int i = 1; i <= vetAnimais.Length -1; i++)
+            {
+                for (int j = 1; j <= vetAnimais.Length - 1 - 1; j++)
+                {
+                    if (vetAnimais[j].Idade(vetAnimais[j].DatadeNascimento) > vetAnimais[j + 1].Idade(vetAnimais[j+1].DatadeNascimento))
+                    {
+                        Animal temp = vetAnimais[j];
+                        vetAnimais[j] = vetAnimais[j + 1];
+                        vetAnimais[j + 1] = temp;
+                    }
+                }
+            }
+
+            return vetAnimais;
+        }
+
         public string ListagemEmOrdem()
         {
             resultado = "";
@@ -124,26 +158,6 @@ namespace N2_POO_ED.Estrutura_de_Dados
                 return PesquisaValor(valor, no.GetNoEsquerda());
         }
 
-        //public void Remove(int valor)
-        //{
-        //    //primeiro, procuramos o nodo que tem o valor:
-        //    Nodo noQueSeraApagado = PesquisaValor(valor, raiz);
-        //    if (noQueSeraApagado == null || noQueSeraApagado.EhExterno())
-        //        throw new Exception("Valor não existe na árvore");
-        //    else
-        //    {
-        //        // um dos filhos é um nó externo
-        //        if (noQueSeraApagado.GetNoEsquerda().EhExterno() ||
-        //         noQueSeraApagado.GetNoDireita().EhExterno())
-        //        {
-        //            ExcluiComNodoExterno(noQueSeraApagado);
-        //        }
-        //        else
-        //        {
-        //            ExcluiSemNodoExterno(noQueSeraApagado);
-        //        }
-        //    }
-        //}
 
         private void ExcluiComNodoExterno(Nodo noQueSeraApagado)
         {

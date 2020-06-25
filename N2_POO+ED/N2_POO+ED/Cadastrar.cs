@@ -157,7 +157,7 @@ namespace N2_POO_ED
 
         }
 
-        public string VerificarPesquisaInterface(string FiltroPesquisa)
+        public string VerificarPesquisaInterface(out string FiltroPesquisa)
         {
 
             if (rdbOviparo.Checked)
@@ -190,7 +190,7 @@ namespace N2_POO_ED
             }
            
 
-            else if (VerificarPesquisaInterface(FiltroPesquisa) != "")
+            else if (VerificarPesquisaInterface(out FiltroPesquisa) != "")
             {
                 resposta = arvore.ListarInterface(FiltroPesquisa).Split('|');
                 foreach (string x in resposta)
@@ -208,50 +208,60 @@ namespace N2_POO_ED
                 }
             }
 
+            else if (rdbIdade.Checked)
+            {
+                Animal[] vetAnimal = arvore.ListarPorIdade();
+                for (int i = 0; i < vetAnimal.Length; i++)
+                {
+                    cbxListagem.Items.Add(vetAnimal[i].Nome + " - " + vetAnimal[i].Idade(vetAnimal[i].DatadeNascimento) + " Ano(S)");
+
+                }
+            }
+
         }
 
         private void btnTodos_Click(object sender, EventArgs e)
         {
-            Baleia baleia = new Baleia("baleia", DateTime.Now, 'F');
+            Baleia baleia = new Baleia("baleia", Convert.ToDateTime("01/01/2020"), 'F');
             arvore.Insere(baleia);
 
-            Tartaruga tartaruga = new Tartaruga("tartaruga", DateTime.Now, 'F');
+            Tartaruga tartaruga = new Tartaruga("tartaruga", Convert.ToDateTime("01 / 01 / 2019"), 'F');
             arvore.Insere(tartaruga);
 
-            Pombo pombo = new Pombo("pombo", DateTime.Now, 'F');
+            Pombo pombo = new Pombo("pombo", Convert.ToDateTime("01 / 01 / 2018"), 'F');
             arvore.Insere(pombo);
 
-            Pinguim pinguim = new Pinguim("pinguim", DateTime.Now, 'F');
+            Pinguim pinguim = new Pinguim("pinguim", Convert.ToDateTime("01 / 01 / 2017"), 'F');
             arvore.Insere(pinguim);
 
-            Pato pato = new Pato("pato", DateTime.Now, 'F');
+            Pato pato = new Pato("pato", Convert.ToDateTime("01 / 01 / 2016"), 'F');
             arvore.Insere(pato);
 
-            Ornitorrinco ornitorrinco = new Ornitorrinco("ornitorrinco", DateTime.Now, 'F');
+            Ornitorrinco ornitorrinco = new Ornitorrinco("ornitorrinco", Convert.ToDateTime("01 / 01 / 2015"), 'F');
             arvore.Insere(ornitorrinco);
 
-            Morcego morcego = new Morcego("morcego", DateTime.Now, 'F');
+            Morcego morcego = new Morcego("morcego", Convert.ToDateTime("01 / 01 / 2014"), 'F');
             arvore.Insere(morcego);
 
-            Leao Leao = new Leao("Leao", DateTime.Now, 'F');
+            Leao Leao = new Leao("Leao", Convert.ToDateTime("01 / 01 / 2013"), 'F');
             arvore.Insere(Leao);
 
-            Gaviao gaviao = new Gaviao("gaviao", DateTime.Now, 'F');
+            Gaviao gaviao = new Gaviao("gaviao", Convert.ToDateTime("01 / 01 / 2012"), 'F');
             arvore.Insere(gaviao);
 
-            Gato gato = new Gato("gato", DateTime.Now, 'F');
+            Gato gato = new Gato("gato", Convert.ToDateTime("01 / 01 / 2011"), 'F');
             arvore.Insere(gato);
 
-            Coruja coruja = new Coruja("coruja", DateTime.Now, 'F');
+            Coruja coruja = new Coruja("coruja", Convert.ToDateTime("01 / 01 / 2010"), 'F');
             arvore.Insere(coruja);
 
-            Coala coala = new Coala("coala", DateTime.Now, 'F');
+            Coala coala = new Coala("coala", Convert.ToDateTime("01 / 01 / 2009"), 'F');
             arvore.Insere(coala);
 
-            Cachorro cachorro = new Cachorro("cachorro", DateTime.Now, 'F');
+            Cachorro cachorro = new Cachorro("cachorro", Convert.ToDateTime("01 / 01 / 2008"), 'F');
             arvore.Insere(cachorro);
 
-            BeijaFlor beijaFlor = new BeijaFlor("beijaFlor", DateTime.Now, 'F');
+            BeijaFlor beijaFlor = new BeijaFlor("beijaFlor", Convert.ToDateTime("01 / 01 / 2007"), 'F');
             arvore.Insere(beijaFlor);
 
 
