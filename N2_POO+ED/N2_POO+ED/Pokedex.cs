@@ -68,5 +68,10 @@ namespace N2_POO_ED
         {
 
         }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

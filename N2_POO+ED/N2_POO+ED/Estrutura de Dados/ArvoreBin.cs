@@ -105,9 +105,9 @@ namespace N2_POO_ED.Estrutura_de_Dados
             contadorVetAnimal = 0;
             PesquisarPorIdade(raiz,vetAnimais);
 
-            for (int i = 1; i <= vetAnimais.Length -1; i++)
+            for (int i = 0; i <= vetAnimais.Length -1; i++)
             {
-                for (int j = 1; j <= vetAnimais.Length - 1 - 1; j++)
+                for (int j = 0; j <= vetAnimais.Length - 1 - 1; j++)
                 {
                     if (vetAnimais[j].Idade(vetAnimais[j].DatadeNascimento) > vetAnimais[j + 1].Idade(vetAnimais[j+1].DatadeNascimento))
                     {

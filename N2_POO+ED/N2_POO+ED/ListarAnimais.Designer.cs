@@ -190,6 +190,7 @@
             this.btnListar.TabIndex = 33;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = false;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // ListarAnimais
             // 
