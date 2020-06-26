@@ -70,6 +70,7 @@
     <Compile Include="Animais\Pinguim.cs" />
     <Compile Include="Animais\Pombo.cs" />
     <Compile Include="Animais\Tartaruga.cs" />
+    <Compile Include="Animais\Tucano.cs" />
     <Compile Include="Animal.cs" />
     <Compile Include="Animais\Pato.cs" />
     <Compile Include="Cadastrar.cs">
@@ -85,28 +86,43 @@
     <Compile Include="Familia\Ave.cs" />
     <Compile Include="Animais\Cachorro.cs" />
     <Compile Include="Animais\Coala.cs" />
-    <Compile Include="Animais\BeijaFlor.cs" />
     <Compile Include="Animais\Gato.cs" />
     <Compile Include="Animais\Morcego.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="CadastarAnimal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="CadastarAnimal.Designer.cs">
+      <DependentUpon>CadastarAnimal.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IAquatico.cs" />
     <Compile Include="Interfaces\IOviparo.cs" />
     <Compile Include="Interfaces\IPredador.cs" />
     <Compile Include="Interfaces\IVoar.cs" />
     <Compile Include="Familia\Mamifero.cs" />
+    <Compile Include="ListarAnimais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarAnimais.Designer.cs">
+      <DependentUpon>ListarAnimais.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Familia\Reptil.cs" />
+    <Compile Include="Pokedex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pokedex.Designer.cs">
+      <DependentUpon>Pokedex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VariavelGlobal.cs" />
     <EmbeddedResource Include="Cadastrar.resx">
       <DependentUpon>Cadastrar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="CadastarAnimal.resx">
+      <DependentUpon>CadastarAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarAnimais.resx">
+      <DependentUpon>ListarAnimais.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -118,6 +134,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Pokedex.resx">
+      <DependentUpon>Pokedex.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

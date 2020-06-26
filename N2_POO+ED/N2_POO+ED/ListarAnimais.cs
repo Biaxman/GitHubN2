@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace N2_POO_ED
 {
-    public partial class Form1 : Form
+    public partial class ListarAnimais : Form
     {
-        public Form1()
+        public ListarAnimais()
         {
             InitializeComponent();
         }
 
-        private void DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            VariavelGlobal.ListarAberto = false;
+            this.Close();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

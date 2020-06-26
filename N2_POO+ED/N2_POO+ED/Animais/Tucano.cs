@@ -4,22 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace N2_POO_ED.Classes_dos_Animais
+namespace N2_POO_ED.Animais
 {
-    class BeijaFlor : Ave, IVoar, IOviparo
+    class Tucano: Ave, IVoar, IOviparo
     {
         private int altMaxMetros;
         private double velocidadeVoo;
 
-        public BeijaFlor(string nome, DateTime data, char sexo)
+        public Tucano(string nome, DateTime data, char sexo)
         {
             Nome = nome;
             DatadeNascimento = data;
             Sexo = sexo;
             Ciscar();
-            CorPena = "Azul";
-            AltMaxMetros = 3000;
-            VelocidadeVoo = 79;
+            CorPena = "Cinza";
+            AltMaxMetros = 100;
+            VelocidadeVoo = 60;
         }
 
         public int AltMaxMetros
@@ -63,6 +63,4 @@ namespace N2_POO_ED.Classes_dos_Animais
 
 
     }
-
 }
-

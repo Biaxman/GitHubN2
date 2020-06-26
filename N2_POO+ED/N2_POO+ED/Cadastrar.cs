@@ -61,7 +61,7 @@ namespace N2_POO_ED
                         break;
 
                     case "Beija-flor":
-                        BeijaFlor beijaFlor = new BeijaFlor(nome, dataNascimento, sexo);
+                        Tucano beijaFlor = new Tucano(nome, dataNascimento, sexo);
                         arvore.Insere(beijaFlor);
                         break;
 
@@ -152,6 +152,9 @@ namespace N2_POO_ED
 
         }
 
+        public void test()
+        {
+        }
         private void button1_Click_1(object sender, EventArgs e)
         {
 
@@ -220,6 +223,7 @@ namespace N2_POO_ED
 
         }
 
+
         private void btnTodos_Click(object sender, EventArgs e)
         {
             Baleia baleia = new Baleia("baleia", Convert.ToDateTime("01/01/2020"), 'F');
@@ -261,11 +265,61 @@ namespace N2_POO_ED
             Cachorro cachorro = new Cachorro("cachorro", Convert.ToDateTime("01 / 01 / 2008"), 'F');
             arvore.Insere(cachorro);
 
-            BeijaFlor beijaFlor = new BeijaFlor("beijaFlor", Convert.ToDateTime("01 / 01 / 2007"), 'F');
-            arvore.Insere(beijaFlor);
+            Tucano tucano = new Tucano("tucano", Convert.ToDateTime("01 / 01 / 2007"), 'F');
+            arvore.Insere(tucano);
 
 
             btnTodos.Enabled = false;
+        }
+
+        private void Cadastrar_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxListagem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbTodos_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbPredador_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbAlfabetico_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbIdade_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbVoador_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbAquatico_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbOviparo_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbMamifero_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
 
 

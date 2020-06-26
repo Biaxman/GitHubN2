@@ -16,7 +16,7 @@ namespace N2_POO_ED
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Cadastrar());
+            Application.Run(new Pokedex());
         }
     }
 }

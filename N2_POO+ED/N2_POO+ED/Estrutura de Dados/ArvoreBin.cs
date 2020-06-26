@@ -204,6 +204,7 @@ namespace N2_POO_ED.Estrutura_de_Dados
             noQueSeraApagado.SetValor(NodoSubstituto.GetValor());
             //Remove o nodo substituto
             ExcluiComNodoExterno(NodoSubstituto);
-        }
+        }
+
     }
 }

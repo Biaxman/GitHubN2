@@ -54,6 +54,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -131,7 +132,6 @@
             this.cbxEspecie.FormattingEnabled = true;
             this.cbxEspecie.Items.AddRange(new object[] {
             "Baleia",
-            "Beija-flor",
             "Cachorro",
             "Coala",
             "Coruja",
@@ -143,7 +143,8 @@
             "Pato",
             "Pinguim",
             "Pombo",
-            "Tartaruga"});
+            "Tartaruga",
+            "Tucano"});
             this.cbxEspecie.Location = new System.Drawing.Point(131, 120);
             this.cbxEspecie.Name = "cbxEspecie";
             this.cbxEspecie.Size = new System.Drawing.Size(121, 21);
@@ -189,10 +190,10 @@
             // 
             // txtTest
             // 
-            this.txtTest.Location = new System.Drawing.Point(343, 227);
+            this.txtTest.Location = new System.Drawing.Point(343, 188);
             this.txtTest.Multiline = true;
             this.txtTest.Name = "txtTest";
-            this.txtTest.Size = new System.Drawing.Size(326, 188);
+            this.txtTest.Size = new System.Drawing.Size(343, 209);
             this.txtTest.TabIndex = 7;
             // 
             // rdbMamifero
@@ -205,28 +206,31 @@
             this.rdbMamifero.TabStop = true;
             this.rdbMamifero.Text = "Mamifero";
             this.rdbMamifero.UseVisualStyleBackColor = true;
+            this.rdbMamifero.CheckedChanged += new System.EventHandler(this.rdbMamifero_CheckedChanged);
             // 
             // rdbOviparo
             // 
             this.rdbOviparo.AutoSize = true;
-            this.rdbOviparo.Location = new System.Drawing.Point(343, 75);
+            this.rdbOviparo.Location = new System.Drawing.Point(343, 55);
             this.rdbOviparo.Name = "rdbOviparo";
             this.rdbOviparo.Size = new System.Drawing.Size(62, 17);
             this.rdbOviparo.TabIndex = 11;
             this.rdbOviparo.TabStop = true;
             this.rdbOviparo.Text = "Oviparo";
             this.rdbOviparo.UseVisualStyleBackColor = true;
+            this.rdbOviparo.CheckedChanged += new System.EventHandler(this.rdbOviparo_CheckedChanged);
             // 
             // rdbAquatico
             // 
             this.rdbAquatico.AutoSize = true;
-            this.rdbAquatico.Location = new System.Drawing.Point(546, 34);
+            this.rdbAquatico.Location = new System.Drawing.Point(559, 34);
             this.rdbAquatico.Name = "rdbAquatico";
             this.rdbAquatico.Size = new System.Drawing.Size(67, 17);
             this.rdbAquatico.TabIndex = 12;
             this.rdbAquatico.TabStop = true;
             this.rdbAquatico.Text = "Aquatico";
             this.rdbAquatico.UseVisualStyleBackColor = true;
+            this.rdbAquatico.CheckedChanged += new System.EventHandler(this.rdbAquatico_CheckedChanged);
             // 
             // rdbVoador
             // 
@@ -238,50 +242,55 @@
             this.rdbVoador.TabStop = true;
             this.rdbVoador.Text = "Voador";
             this.rdbVoador.UseVisualStyleBackColor = true;
+            this.rdbVoador.CheckedChanged += new System.EventHandler(this.rdbVoador_CheckedChanged);
             // 
             // rdbIdade
             // 
             this.rdbIdade.AutoSize = true;
-            this.rdbIdade.Location = new System.Drawing.Point(343, 119);
+            this.rdbIdade.Location = new System.Drawing.Point(343, 78);
             this.rdbIdade.Name = "rdbIdade";
             this.rdbIdade.Size = new System.Drawing.Size(52, 17);
             this.rdbIdade.TabIndex = 14;
             this.rdbIdade.TabStop = true;
             this.rdbIdade.Text = "Idade";
             this.rdbIdade.UseVisualStyleBackColor = true;
+            this.rdbIdade.CheckedChanged += new System.EventHandler(this.rdbIdade_CheckedChanged);
             // 
             // rdbAlfabetico
             // 
             this.rdbAlfabetico.AutoSize = true;
-            this.rdbAlfabetico.Location = new System.Drawing.Point(541, 75);
+            this.rdbAlfabetico.Location = new System.Drawing.Point(559, 55);
             this.rdbAlfabetico.Name = "rdbAlfabetico";
             this.rdbAlfabetico.Size = new System.Drawing.Size(72, 17);
             this.rdbAlfabetico.TabIndex = 15;
             this.rdbAlfabetico.TabStop = true;
             this.rdbAlfabetico.Text = "Alfabética";
             this.rdbAlfabetico.UseVisualStyleBackColor = true;
+            this.rdbAlfabetico.CheckedChanged += new System.EventHandler(this.rdbAlfabetico_CheckedChanged);
             // 
             // rdbPredador
             // 
             this.rdbPredador.AutoSize = true;
-            this.rdbPredador.Location = new System.Drawing.Point(445, 75);
+            this.rdbPredador.Location = new System.Drawing.Point(445, 55);
             this.rdbPredador.Name = "rdbPredador";
             this.rdbPredador.Size = new System.Drawing.Size(68, 17);
             this.rdbPredador.TabIndex = 16;
             this.rdbPredador.TabStop = true;
             this.rdbPredador.Text = "Predador";
             this.rdbPredador.UseVisualStyleBackColor = true;
+            this.rdbPredador.CheckedChanged += new System.EventHandler(this.rdbPredador_CheckedChanged);
             // 
             // rdbTodos
             // 
             this.rdbTodos.AutoSize = true;
-            this.rdbTodos.Location = new System.Drawing.Point(445, 119);
+            this.rdbTodos.Location = new System.Drawing.Point(445, 78);
             this.rdbTodos.Name = "rdbTodos";
             this.rdbTodos.Size = new System.Drawing.Size(94, 17);
             this.rdbTodos.TabIndex = 17;
             this.rdbTodos.TabStop = true;
             this.rdbTodos.Text = "Todos Animais";
             this.rdbTodos.UseVisualStyleBackColor = true;
+            this.rdbTodos.CheckedChanged += new System.EventHandler(this.rdbTodos_CheckedChanged);
             // 
             // btnListar
             // 
@@ -308,15 +317,16 @@
             this.cbxListagem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxListagem.FormattingEnabled = true;
             this.cbxListagem.IntegralHeight = false;
-            this.cbxListagem.Location = new System.Drawing.Point(343, 174);
+            this.cbxListagem.Location = new System.Drawing.Point(343, 132);
             this.cbxListagem.Name = "cbxListagem";
             this.cbxListagem.Size = new System.Drawing.Size(196, 21);
             this.cbxListagem.TabIndex = 7;
+            this.cbxListagem.SelectedIndexChanged += new System.EventHandler(this.cbxListagem_SelectedIndexChanged);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(364, 249);
+            this.groupBox2.Location = new System.Drawing.Point(364, 203);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(100, 69);
             this.groupBox2.TabIndex = 20;
@@ -325,7 +335,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 28);
+            this.label5.Location = new System.Drawing.Point(6, 16);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 13);
             this.label5.TabIndex = 0;
@@ -333,12 +343,37 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.comboBox1);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Location = new System.Drawing.Point(364, 324);
+            this.groupBox3.Location = new System.Drawing.Point(364, 303);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(290, 79);
             this.groupBox3.TabIndex = 21;
             this.groupBox3.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Baleia",
+            "Beija-flor",
+            "Cachorro",
+            "Coala",
+            "Coruja",
+            "Gato",
+            "Gavião",
+            "Leão",
+            "Morcego",
+            "Ornitorrinco",
+            "Pato",
+            "Pinguim",
+            "Pombo",
+            "Tartaruga"});
+            this.comboBox1.Location = new System.Drawing.Point(180, 19);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(104, 21);
+            this.comboBox1.TabIndex = 7;
             // 
             // label6
             // 
@@ -371,6 +406,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Cadastrar";
             this.Text = "Cadastrar";
+            this.Load += new System.EventHandler(this.Cadastrar_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -411,5 +447,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
