@@ -51,12 +51,13 @@ namespace N2_POO_ED
 
         private void label2_Click(object sender, EventArgs e)
         {
-            if(VariavelGlobal.ListarAberto == false)
+            if (VariavelGlobal.ListarAberto == false)
             {
                 VariavelGlobal.ListarAberto = true;
                 ListarAnimais listar = new ListarAnimais();
                 listar.Show();
             }
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
