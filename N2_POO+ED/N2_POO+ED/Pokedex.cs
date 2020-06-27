@@ -117,5 +117,10 @@ namespace N2_POO_ED
             if (listar != null)
                 listar.Location = new Point(this.Location.X + this.Width, this.Location.Y + 299);
         }
+
+        private void pnlFundo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

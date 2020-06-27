@@ -99,5 +99,10 @@ namespace N2_POO_ED
             Animal a = VariavelGlobal.arvore.PesquisarPorNome(cbxListagem.SelectedItem.ToString());
             metodoDelegado(a);
         }
+
+        private void cbxListagem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
