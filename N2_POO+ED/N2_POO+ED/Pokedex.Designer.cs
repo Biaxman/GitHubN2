@@ -35,6 +35,7 @@
             this.ptbAtaque = new System.Windows.Forms.PictureBox();
             this.ptbAnimal = new System.Windows.Forms.PictureBox();
             this.txtInfo = new System.Windows.Forms.RichTextBox();
+            this.pnlBorder = new System.Windows.Forms.Panel();
             this.pnlFundo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAtaque)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAnimal)).BeginInit();
@@ -107,6 +108,15 @@
             this.txtInfo.TabIndex = 6;
             this.txtInfo.Text = "";
             // 
+            // pnlBorder
+            // 
+            this.pnlBorder.BackColor = System.Drawing.Color.Transparent;
+            this.pnlBorder.Location = new System.Drawing.Point(-1, 0);
+            this.pnlBorder.Name = "pnlBorder";
+            this.pnlBorder.Size = new System.Drawing.Size(401, 14);
+            this.pnlBorder.TabIndex = 7;
+            this.pnlBorder.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBorder_MouseDown);
+            // 
             // Pokedex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -114,6 +124,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(399, 598);
+            this.Controls.Add(this.pnlBorder);
             this.Controls.Add(this.txtInfo);
             this.Controls.Add(this.pnlFundo);
             this.Controls.Add(this.btnListar);
@@ -124,6 +135,7 @@
             this.Name = "Pokedex";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "tet";
+            this.Move += new System.EventHandler(this.Pokedex_Move);
             this.pnlFundo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbAtaque)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAnimal)).EndInit();
@@ -140,5 +152,6 @@
         private System.Windows.Forms.PictureBox ptbAnimal;
         private System.Windows.Forms.PictureBox ptbAtaque;
         private System.Windows.Forms.RichTextBox txtInfo;
+        private System.Windows.Forms.Panel pnlBorder;
     }
 }
