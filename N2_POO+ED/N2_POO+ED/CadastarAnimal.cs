@@ -150,6 +150,8 @@ namespace N2_POO_ED
 
         private void btnCadastrarTodos_Click(object sender, EventArgs e)
         {
+            try
+            {
             Baleia baleia = new Baleia("Wailord", Convert.ToDateTime("01/01/2020"), 'F');
             VariavelGlobal.arvore.Insere(baleia);
 
@@ -192,7 +194,11 @@ namespace N2_POO_ED
             Tucano tucano = new Tucano("Toucannon", Convert.ToDateTime("01 / 01 / 2007"), 'F');
             VariavelGlobal.arvore.Insere(tucano);
 
-
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Animais já cadastrados");
+            }
             btnCadastrarTodos.Enabled = false;
         }
     }
