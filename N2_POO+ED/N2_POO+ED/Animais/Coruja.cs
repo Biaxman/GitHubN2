@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace N2_POO_ED.Animais
 {
-    class Coruja : Ave, IVoar, IOviparo, IPredador
+    public class Coruja : Ave, IVoar, IOviparo, IPredador
     {
         private int altMaxMetros;
         private double velocidadeVoo;

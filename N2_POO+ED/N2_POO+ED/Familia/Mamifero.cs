@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace N2_POO_ED
 {
-    class Mamifero : Animal
+    public class Mamifero : Animal
     {
         private bool temPelos = false;
         public int QtdeMamas { get; set; }

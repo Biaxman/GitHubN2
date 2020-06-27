@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace N2_POO_ED.Classes_dos_Animais
+namespace N2_POO_ED.Animais
 {
-    class Pato: Ave, IOviparo, IVoar, IAquatico
+    public class Pato: Ave, IOviparo, IVoar, IAquatico
     {
         private int altMaxMetros;
         private double velocidadeVoo;

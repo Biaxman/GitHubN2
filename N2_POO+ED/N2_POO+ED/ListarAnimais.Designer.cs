@@ -178,6 +178,7 @@
             this.cbxListagem.Name = "cbxListagem";
             this.cbxListagem.Size = new System.Drawing.Size(196, 21);
             this.cbxListagem.TabIndex = 32;
+            this.cbxListagem.SelectedValueChanged += new System.EventHandler(this.cbxListagem_SelectedValueChanged);
             // 
             // btnListar
             // 

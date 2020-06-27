@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace N2_POO_ED.Classes_dos_Animais
+namespace N2_POO_ED.Animais
 {
-    class Morcego : Mamifero, IVoar
+    public class Morcego : Mamifero, IVoar
     {
         private int altMaxMetros;
         private double velocidadeVoo;

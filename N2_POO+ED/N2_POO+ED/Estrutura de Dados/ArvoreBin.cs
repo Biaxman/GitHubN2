@@ -31,7 +31,7 @@ namespace N2_POO_ED.Estrutura_de_Dados
             else
             {
                 // localiza onde deve ser inserido o novo nó.
-                no_aux = PesquisaValor(valor, raiz);
+                no_aux = PesquisaValor(valor.Nome, raiz);
                 if (no_aux.EhInterno())
                 {
                     throw new Exception("Este valor já existe na árvore!!!!");
@@ -63,11 +63,14 @@ namespace N2_POO_ED.Estrutura_de_Dados
             if (no.EhExterno())
                 return;
             PesquisarMamifero(no.GetNoEsquerda());
-            if (no.GetValor().GetType().BaseType.Name == "Mamifero")
+            
+            if(no.GetValor() is Mamifero)
+            {
                 if (resultado == "")
                     resultado = no.GetValor().Nome;
                 else
                     resultado = resultado + "|" + no.GetValor().Nome;
+            }
             PesquisarMamifero(no.GetNoDireita());
         }
 
@@ -77,17 +80,16 @@ namespace N2_POO_ED.Estrutura_de_Dados
                 return;
             PesquisarPorInterface(no.GetNoEsquerda(), tipo);
             object[] InterfacesVet = no.GetValor().GetType().GetInterfaces();
-            for (int i = 0; i < InterfacesVet.Length; i++)
+
+            if(no.GetValor().GetType().GetInterfaces().Where(o => o.Name == tipo).Count() > 0)
             {
-                string a = InterfacesVet[i].ToString();
-                string b = a.Substring(a.IndexOf('.') + 1);
-                if(b == tipo)
-                    if (resultado == "")
-                        resultado = no.GetValor().Nome;
-                    else
-                        resultado = resultado + "|" + no.GetValor().Nome;
+                if (resultado == "")
+                    resultado = no.GetValor().Nome;
+                else
+                    resultado = resultado + "|" + no.GetValor().Nome;
             }
-            PesquisarPorInterface(no.GetNoDireita(),tipo);
+
+            PesquisarPorInterface(no.GetNoDireita(), tipo);
         }
 
         private void PesquisarPorIdade(Nodo no, Animal[]vet)
@@ -145,19 +147,25 @@ namespace N2_POO_ED.Estrutura_de_Dados
             return resultado;
         }
 
-        private Nodo PesquisaValor(Animal valor, Nodo no)
+        private Nodo PesquisaValor(string nome, Nodo no)
         {
 
             if (no.EhExterno())
                 return no; // não achou!
-            else if (valor.Nome.CompareTo(no.GetValor().Nome) == 0)
+            else if (nome.CompareTo(no.GetValor().Nome) == 0)
                 return no;
-            else if (valor.Nome.CompareTo(no.GetValor().Nome) == 1)
-                return PesquisaValor(valor, no.GetNoDireita());
+            else if (nome.CompareTo(no.GetValor().Nome) == 1)
+                return PesquisaValor(nome, no.GetNoDireita());
             else
-                return PesquisaValor(valor, no.GetNoEsquerda());
+                return PesquisaValor(nome, no.GetNoEsquerda());
         }
 
+        public Animal PesquisarPorNome(string nome)
+        {
+            Nodo n = PesquisaValor(nome, raiz);
+
+            return n.GetValor();
+        }
 
         private void ExcluiComNodoExterno(Nodo noQueSeraApagado)
         {

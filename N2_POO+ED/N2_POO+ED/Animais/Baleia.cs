@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace N2_POO_ED.Animais
 {
-    class Baleia: Mamifero, IAquatico, IPredador
+    public class Baleia: Mamifero, IAquatico, IPredador
     {
         private bool viveEmTerra;
         private bool mergulho;
@@ -64,6 +64,16 @@ namespace N2_POO_ED.Animais
         public void Ataque()
         {
             Console.WriteLine("Atacar");
+        }
+
+        public override string ToString()
+        {
+            StringBuilder s = new StringBuilder();
+            s.AppendLine("Espécie: Baleia");
+            s.AppendLine("Nome: " + Nome);
+            s.AppendLine("Data Nasc.: " + DatadeNascimento.ToShortDateString());
+
+            return s.ToString();
         }
     }
 }

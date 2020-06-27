@@ -12,8 +12,13 @@ namespace N2_POO_ED
 {
     public partial class ListarAnimais : Form
     {
-        public ListarAnimais()
+        public delegate void AtualizarFormPrincipal(Animal a);
+
+        public AtualizarFormPrincipal metodoDelegado;
+
+        public ListarAnimais(AtualizarFormPrincipal metodoRecebido)
         {
+            metodoDelegado = metodoRecebido;
             InitializeComponent();
         }
 
@@ -87,6 +92,12 @@ namespace N2_POO_ED
 
                 }
             }
+        }
+
+        private void cbxListagem_SelectedValueChanged(object sender, EventArgs e)
+        {
+            Animal a = VariavelGlobal.arvore.PesquisarPorNome(cbxListagem.SelectedItem.ToString());
+            metodoDelegado(a);
         }
     }
 }

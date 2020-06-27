@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace N2_POO_ED
 {
-    class Ave : Animal
+    public class Ave : Animal
     {
         private bool rapina = false;
         public bool Rapina

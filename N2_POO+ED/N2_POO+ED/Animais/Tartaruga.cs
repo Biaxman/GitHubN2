@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace N2_POO_ED.Animais
 {
-    class Tartaruga : Reptil, IAquatico, IOviparo
+    public class Tartaruga : Reptil, IAquatico, IOviparo
     {
         private bool viveEmTerra;
         private bool mergulho;

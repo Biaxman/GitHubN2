@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace N2_POO_ED.Classes_dos_Animais
+namespace N2_POO_ED.Animais
 {
-    class Cachorro : Mamifero, IPredador
+    public class Cachorro : Mamifero, IPredador
     {
         public Cachorro(string nome, DateTime data, char sexo)
         {

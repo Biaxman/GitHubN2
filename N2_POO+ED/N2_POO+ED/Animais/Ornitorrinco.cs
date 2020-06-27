@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace N2_POO_ED.Animais
 {
-    class Ornitorrinco : Mamifero, IAquatico, IOviparo
+    public class Ornitorrinco : Mamifero, IAquatico, IOviparo
     {
         private bool viveEmTerra;
         private bool mergulho;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace N2_POO_ED.Animais
 {
-    class Pinguim : Ave, IOviparo, IAquatico
+    public class Pinguim : Ave, IOviparo, IAquatico
     {
         private bool viveEmTerra;
         private bool mergulho;

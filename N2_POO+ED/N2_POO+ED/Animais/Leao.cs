@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace N2_POO_ED.Animais
 {
-    class Leao: Mamifero, IPredador
+    public class Leao: Mamifero, IPredador
     {
         public Leao(string nome, DateTime data, char sexo)
         {

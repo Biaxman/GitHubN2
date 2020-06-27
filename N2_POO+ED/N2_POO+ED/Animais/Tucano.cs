@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace N2_POO_ED.Animais
 {
-    class Tucano: Ave, IVoar, IOviparo
+    public class Tucano: Ave, IVoar, IOviparo
     {
         private int altMaxMetros;
         private double velocidadeVoo;

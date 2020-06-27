@@ -162,5 +162,31 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagens\AtaqueOnda.png" />
+    <Content Include="Imagens\bravary2.png" />
+    <Content Include="Imagens\ducklett.png" />
+    <Content Include="Imagens\FundoAgua.png" />
+    <Content Include="Imagens\FundoGrama.png" />
+    <Content Include="Imagens\glameow.png" />
+    <Content Include="Imagens\golbat.png" />
+    <Content Include="Imagens\herdier2.png" />
+    <Content Include="Imagens\komala.png" />
+    <Content Include="Imagens\lancaChamas.png" />
+    <Content Include="Imagens\Ninho.png" />
+    <Content Include="Imagens\noctowl.png" />
+    <Content Include="Imagens\ovo.png" />
+    <Content Include="Imagens\pedolv.png" />
+    <Content Include="Imagens\PokedexDefinitiva.jpg" />
+    <Content Include="Imagens\PokedexTerra.png" />
+    <Content Include="Imagens\PokedexTestMinimalista.png" />
+    <Content Include="Imagens\Prinplup.png" />
+    <Content Include="Imagens\Psyduck.png" />
+    <Content Include="Imagens\pyroar.png" />
+    <Content Include="Imagens\Tirtouga.png" />
+    <Content Include="Imagens\Tornado.png" />
+    <Content Include="Imagens\Toucannon.png" />
+    <Content Include="Imagens\Wailord.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

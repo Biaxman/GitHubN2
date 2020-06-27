@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using N2_POO_ED.Animais;
-using N2_POO_ED.Classes_dos_Animais;
 
 namespace N2_POO_ED
 {

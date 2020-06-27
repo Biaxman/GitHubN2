@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace N2_POO_ED.Animais
 {
-    class Gaviao : Ave, IVoar , IPredador, IOviparo
+    public class Gaviao : Ave, IVoar , IPredador, IOviparo
     {
         private int altMaxMetros;
         private double velocidadeVoo;

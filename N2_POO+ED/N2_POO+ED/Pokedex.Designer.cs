@@ -31,12 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pokedex));
             this.label1 = new System.Windows.Forms.Label();
             this.btnListar = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlFundo = new System.Windows.Forms.Panel();
+            this.ptbAtaque = new System.Windows.Forms.PictureBox();
+            this.ptbAnimal = new System.Windows.Forms.PictureBox();
+            this.txtInfo = new System.Windows.Forms.RichTextBox();
+            this.pnlFundo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAtaque)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAnimal)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -65,39 +66,46 @@
             this.btnListar.Text = "\r\n   Listar\r\n\r\n";
             this.btnListar.Click += new System.EventHandler(this.label2_Click);
             // 
-            // panel1
+            // pnlFundo
             // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(43, 170);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(292, 189);
-            this.panel1.TabIndex = 5;
+            this.pnlFundo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlFundo.BackgroundImage")));
+            this.pnlFundo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlFundo.Controls.Add(this.ptbAtaque);
+            this.pnlFundo.Controls.Add(this.ptbAnimal);
+            this.pnlFundo.Location = new System.Drawing.Point(43, 170);
+            this.pnlFundo.Name = "pnlFundo";
+            this.pnlFundo.Size = new System.Drawing.Size(292, 189);
+            this.pnlFundo.TabIndex = 5;
             // 
-            // pictureBox2
+            // ptbAtaque
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(96, 73);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(57, 66);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
+            this.ptbAtaque.BackColor = System.Drawing.Color.Transparent;
+            this.ptbAtaque.Image = ((System.Drawing.Image)(resources.GetObject("ptbAtaque.Image")));
+            this.ptbAtaque.Location = new System.Drawing.Point(96, 73);
+            this.ptbAtaque.Name = "ptbAtaque";
+            this.ptbAtaque.Size = new System.Drawing.Size(57, 66);
+            this.ptbAtaque.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbAtaque.TabIndex = 1;
+            this.ptbAtaque.TabStop = false;
             // 
-            // pictureBox1
+            // ptbAnimal
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 64);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(87, 85);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.ptbAnimal.BackColor = System.Drawing.Color.Transparent;
+            this.ptbAnimal.Image = ((System.Drawing.Image)(resources.GetObject("ptbAnimal.Image")));
+            this.ptbAnimal.Location = new System.Drawing.Point(3, 64);
+            this.ptbAnimal.Name = "ptbAnimal";
+            this.ptbAnimal.Size = new System.Drawing.Size(87, 85);
+            this.ptbAnimal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbAnimal.TabIndex = 0;
+            this.ptbAnimal.TabStop = false;
+            // 
+            // txtInfo
+            // 
+            this.txtInfo.Location = new System.Drawing.Point(43, 400);
+            this.txtInfo.Name = "txtInfo";
+            this.txtInfo.Size = new System.Drawing.Size(153, 134);
+            this.txtInfo.TabIndex = 6;
+            this.txtInfo.Text = "";
             // 
             // Pokedex
             // 
@@ -106,7 +114,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(399, 598);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.txtInfo);
+            this.Controls.Add(this.pnlFundo);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
@@ -115,10 +124,9 @@
             this.Name = "Pokedex";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "tet";
-            this.Load += new System.EventHandler(this.tet_Load);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlFundo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAtaque)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAnimal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,8 +136,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label btnListar;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel pnlFundo;
+        private System.Windows.Forms.PictureBox ptbAnimal;
+        private System.Windows.Forms.PictureBox ptbAtaque;
+        private System.Windows.Forms.RichTextBox txtInfo;
     }
 }
