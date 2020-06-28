@@ -96,7 +96,8 @@ namespace N2_POO_ED
 
         private void cbxListagem_SelectedValueChanged(object sender, EventArgs e)
         {
-            Animal a = VariavelGlobal.arvore.PesquisarPorNome(cbxListagem.SelectedItem.ToString());
+            string animal = cbxListagem.SelectedItem.ToString().Substring(0, cbxListagem.SelectedItem.ToString().IndexOf(" "));
+            Animal a = VariavelGlobal.arvore.PesquisarPorNome(animal);
             metodoDelegado(a);
         }
 

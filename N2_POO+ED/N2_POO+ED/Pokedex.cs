@@ -122,5 +122,10 @@ namespace N2_POO_ED
         {
 
         }
+
+        private void lblFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

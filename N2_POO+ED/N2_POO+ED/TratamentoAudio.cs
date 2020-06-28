@@ -11,7 +11,7 @@ namespace N2_POO_ED
     {
          public static void playQuemEsse()
         {
-            SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\Atomic\Desktop\N2\Pokemons\quemeesse.wav");
+            SoundPlayer simpleSound = new SoundPlayer(@"quemeesse.wav");
             simpleSound.Play();
         }
     }

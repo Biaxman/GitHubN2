@@ -36,6 +36,7 @@
             this.ptbAnimal = new System.Windows.Forms.PictureBox();
             this.txtInfo = new System.Windows.Forms.RichTextBox();
             this.pnlBorder = new System.Windows.Forms.Panel();
+            this.lblFechar = new System.Windows.Forms.Label();
             this.pnlFundo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAtaque)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAnimal)).BeginInit();
@@ -118,6 +119,17 @@
             this.pnlBorder.TabIndex = 7;
             this.pnlBorder.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBorder_MouseDown);
             // 
+            // lblFechar
+            // 
+            this.lblFechar.AutoSize = true;
+            this.lblFechar.BackColor = System.Drawing.Color.Transparent;
+            this.lblFechar.Location = new System.Drawing.Point(291, 32);
+            this.lblFechar.Name = "lblFechar";
+            this.lblFechar.Size = new System.Drawing.Size(14, 13);
+            this.lblFechar.TabIndex = 8;
+            this.lblFechar.Text = "X";
+            this.lblFechar.Click += new System.EventHandler(this.lblFechar_Click);
+            // 
             // Pokedex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -125,6 +137,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(399, 598);
+            this.Controls.Add(this.lblFechar);
             this.Controls.Add(this.pnlBorder);
             this.Controls.Add(this.txtInfo);
             this.Controls.Add(this.pnlFundo);
@@ -132,10 +145,11 @@
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(100, 100);
             this.Name = "Pokedex";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "tet";
+            this.Text = "Pokedex";
             this.Move += new System.EventHandler(this.Pokedex_Move);
             this.pnlFundo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbAtaque)).EndInit();
@@ -154,5 +168,6 @@
         private System.Windows.Forms.PictureBox ptbAtaque;
         private System.Windows.Forms.RichTextBox txtInfo;
         private System.Windows.Forms.Panel pnlBorder;
+        private System.Windows.Forms.Label lblFechar;
     }
 }

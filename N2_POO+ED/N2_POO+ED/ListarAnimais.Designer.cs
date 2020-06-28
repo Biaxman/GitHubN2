@@ -213,10 +213,11 @@
             this.Controls.Add(this.rdbOviparo);
             this.Controls.Add(this.rdbMamifero);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(490, 399);
             this.Name = "ListarAnimais";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "ListarAnimais";
+            this.Text = "Listar";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

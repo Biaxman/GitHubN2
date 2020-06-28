@@ -38,7 +38,7 @@
             // pcbVoltar
             // 
             this.pcbVoltar.Image = ((System.Drawing.Image)(resources.GetObject("pcbVoltar.Image")));
-            this.pcbVoltar.Location = new System.Drawing.Point(417, 29);
+            this.pcbVoltar.Location = new System.Drawing.Point(369, 12);
             this.pcbVoltar.Name = "pcbVoltar";
             this.pcbVoltar.Size = new System.Drawing.Size(36, 54);
             this.pcbVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -75,15 +75,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(494, 113);
+            this.ClientSize = new System.Drawing.Size(441, 113);
             this.Controls.Add(this.lblMensagem);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pcbVoltar);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MessageBox";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MessageBoxCadastro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Aviso";
             ((System.ComponentModel.ISupportInitialize)(this.pcbVoltar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
