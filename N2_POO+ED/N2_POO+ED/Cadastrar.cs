@@ -38,7 +38,7 @@ namespace N2_POO_ED
             }
             catch (Exception)
             {
-                MessageBox.Show("Data Inválida!");
+                System.Windows.Forms.MessageBox.Show("Data Inválida!");
             }
 
 
@@ -129,7 +129,7 @@ namespace N2_POO_ED
             }
             catch (Exception)
             {
-                MessageBox.Show("Já existe um animal com esse nome!");
+                System.Windows.Forms.MessageBox.Show("Já existe um animal com esse nome!");
             }
 
 

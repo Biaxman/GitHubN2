@@ -43,9 +43,10 @@ namespace N2_POO_ED
             }
             catch (Exception)
             {
-                MessageBox.Show("Data Inválida!");
+                MessageBox msgErro = new MessageBox("Data Inválida!");
+                msgErro.ShowDialog();
+                return;
             }
-
 
             string nome = txtNome.Text;
             char sexo = 'F';
@@ -133,9 +134,14 @@ namespace N2_POO_ED
                 }
             }
             catch (Exception)
-            {
-                MessageBox.Show("Já existe um animal com esse nome!");
+            {             
+                MessageBox msgErro = new MessageBox("Já existe um animal com esse nome!");
+                msgErro.ShowDialog();
+                return;
             }
+            MessageBox msg = new MessageBox("Cadastro Realizado Com Sucesso");
+            TratamentoAudio.playQuemEsse();
+            msg.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -197,9 +203,15 @@ namespace N2_POO_ED
             }
             catch (Exception)
             {
-                MessageBox.Show("Animais já cadastrados");
+                MessageBox msgErro = new MessageBox("Animais já cadastrados");
+                msgErro.ShowDialog();
+                return;
             }
             btnCadastrarTodos.Enabled = false;
+            MessageBox msg = new MessageBox("Cadastro Realizado Com Sucesso");
+            TratamentoAudio.playQuemEsse();
+            msg.ShowDialog();
+            
         }
     }
 }

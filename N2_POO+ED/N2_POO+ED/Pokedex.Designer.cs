@@ -77,6 +77,7 @@
             this.pnlFundo.Name = "pnlFundo";
             this.pnlFundo.Size = new System.Drawing.Size(292, 189);
             this.pnlFundo.TabIndex = 5;
+            this.pnlFundo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlFundo_Paint);
             // 
             // ptbAtaque
             // 
