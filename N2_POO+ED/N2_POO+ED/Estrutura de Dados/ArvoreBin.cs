@@ -50,10 +50,11 @@ namespace N2_POO_ED.Estrutura_de_Dados
             if (no.EhExterno())
                 return;
             PercursoInterfixado(no.GetNoEsquerda());
+            string Especie= no.GetValor().GetType().FullName.Replace("N2_POO_ED.Animais.", "");
             if (resultado == "")
-                resultado = no.GetValor().Nome;
+                resultado = no.GetValor().Nome + " - " + Especie;
             else
-                resultado = resultado + "|" + no.GetValor().Nome;
+                resultado = resultado + "|" + no.GetValor().Nome + " - " + Especie;
             PercursoInterfixado(no.GetNoDireita());
         }
 
@@ -63,13 +64,13 @@ namespace N2_POO_ED.Estrutura_de_Dados
             if (no.EhExterno())
                 return;
             PesquisarMamifero(no.GetNoEsquerda());
-            
-            if(no.GetValor() is Mamifero)
+            string Especie = no.GetValor().GetType().FullName.Replace("N2_POO_ED.Animais.", "");
+            if (no.GetValor() is Mamifero)
             {
                 if (resultado == "")
-                    resultado = no.GetValor().Nome;
+                    resultado = no.GetValor().Nome + " - " + Especie;
                 else
-                    resultado = resultado + "|" + no.GetValor().Nome;
+                    resultado = resultado + "|" + no.GetValor().Nome + " - " + Especie;
             }
             PesquisarMamifero(no.GetNoDireita());
         }
@@ -79,14 +80,15 @@ namespace N2_POO_ED.Estrutura_de_Dados
             if (no.EhExterno())
                 return;
             PesquisarPorInterface(no.GetNoEsquerda(), tipo);
+            string Especie = no.GetValor().GetType().FullName.Replace("N2_POO_ED.Animais.", "");
             object[] InterfacesVet = no.GetValor().GetType().GetInterfaces();
 
             if(no.GetValor().GetType().GetInterfaces().Where(o => o.Name == tipo).Count() > 0)
             {
                 if (resultado == "")
-                    resultado = no.GetValor().Nome;
+                    resultado = no.GetValor().Nome + " - " + Especie;
                 else
-                    resultado = resultado + "|" + no.GetValor().Nome;
+                    resultado = resultado + "|" + no.GetValor().Nome + " - " + Especie;
             }
 
             PesquisarPorInterface(no.GetNoDireita(), tipo);
