@@ -213,5 +213,10 @@ namespace N2_POO_ED
             msg.ShowDialog();
             
         }
+
+        private void cbxEspecie_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

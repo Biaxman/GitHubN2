@@ -72,7 +72,6 @@
             this.cbxEspecie.FormattingEnabled = true;
             this.cbxEspecie.Items.AddRange(new object[] {
             "Baleia",
-            "Beija-flor",
             "Cachorro",
             "Coala",
             "Coruja",
@@ -84,11 +83,13 @@
             "Pato",
             "Pinguim",
             "Pombo",
-            "Tartaruga"});
+            "Tartaruga",
+            "Tucano"});
             this.cbxEspecie.Location = new System.Drawing.Point(185, 167);
             this.cbxEspecie.Name = "cbxEspecie";
             this.cbxEspecie.Size = new System.Drawing.Size(142, 21);
             this.cbxEspecie.TabIndex = 11;
+            this.cbxEspecie.SelectedIndexChanged += new System.EventHandler(this.cbxEspecie_SelectedIndexChanged);
             // 
             // radioButton2
             // 

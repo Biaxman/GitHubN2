@@ -44,7 +44,19 @@ namespace N2_POO_ED
             return idade;
         }
 
-        
+        private string SexoTexto()
+        {
+            if (Sexo == 'M' || Sexo == 'm')
+                return "Macho";
+            else if (Sexo == 'F' || Sexo == 'f')
+                return "Femea";
+            else
+                return "Sexo não definido";
+        }
+        public override string ToString()
+        {
+            return "Nome: " +Nome+ "\nIdade: "+Idade(DatadeNascimento).ToString()+"\nSexo: "+ SexoTexto();
+        }
     }
 
 }
