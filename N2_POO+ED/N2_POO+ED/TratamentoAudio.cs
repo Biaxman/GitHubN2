@@ -11,8 +11,8 @@ namespace N2_POO_ED
     {
          public static void playQuemEsse()
         {
-            SoundPlayer simpleSound = new SoundPlayer(@"quemeesse.wav");
-            simpleSound.Play();
+            SoundPlayer audio = new SoundPlayer(Properties.Resources.quemeesse);
+            audio.Play();
         }
     }
 }
