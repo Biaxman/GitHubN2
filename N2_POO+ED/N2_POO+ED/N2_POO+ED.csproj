@@ -73,12 +73,6 @@
     <Compile Include="Animais\Tucano.cs" />
     <Compile Include="Animal.cs" />
     <Compile Include="Animais\Pato.cs" />
-    <Compile Include="Cadastrar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cadastrar.Designer.cs">
-      <DependentUpon>Cadastrar.cs</DependentUpon>
-    </Compile>
     <Compile Include="Estrutura de Dados\ArvoreBin.cs" />
     <Compile Include="Estrutura de Dados\ListaAnimais.cs" />
     <Compile Include="Estrutura de Dados\Nodo.cs" />
@@ -122,9 +116,6 @@
     </Compile>
     <Compile Include="TratamentoAudio.cs" />
     <Compile Include="VariavelGlobal.cs" />
-    <EmbeddedResource Include="Cadastrar.resx">
-      <DependentUpon>Cadastrar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CadastarAnimal.resx">
       <DependentUpon>CadastarAnimal.cs</DependentUpon>
     </EmbeddedResource>

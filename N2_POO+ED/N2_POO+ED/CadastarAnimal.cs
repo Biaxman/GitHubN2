@@ -38,7 +38,28 @@ namespace N2_POO_ED
             DateTime dataNascimento = DateTime.Now;
             try
             {
+                if(String.IsNullOrEmpty(txtNome.Text))
+                {
+                    MessageBox msgErro = new MessageBox("Nome não pode estar vazio!");
+                    msgErro.ShowDialog();
+                    return;
+                }
+
+                if (String.IsNullOrEmpty(cbxEspecie.Text))
+                {
+                    MessageBox msgErro = new MessageBox("Escolha um animal para cadastrar");
+                    msgErro.ShowDialog();
+                    return;
+                }
+
                 dataNascimento = Convert.ToDateTime(txtDataNascimento.Text);
+
+                if (dataNascimento > DateTime.Now)
+                {
+                    MessageBox msgErro = new MessageBox("Data de nascimento maior que a atual!");
+                    msgErro.ShowDialog();
+                    return;
+                }
 
             }
             catch (Exception)
