@@ -235,10 +235,10 @@ namespace N2_POO_ED
 
         private void btnAndar_Click(object sender, EventArgs e)
         {
+            BloquearBotoes();
             ptbAnimal.BringToFront();
             posicaoInicial = ptbAnimal.Location;
             tmrMovimentar.Enabled = true;
-            BloquearBotoes();
         }
 
         private void tmrMovimentar_Tick(object sender, EventArgs e)
@@ -343,6 +343,7 @@ namespace N2_POO_ED
         private void tmrAmamentar_Tick(object sender, EventArgs e)
         {
             ptbAtaque.Image = null;
+            tmrAmamentar.Enabled = false;
             AtualizarBotoes(animalAtual);
         }
 
