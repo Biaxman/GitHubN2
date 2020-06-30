@@ -230,7 +230,7 @@ namespace N2_POO_ED
             }
             btnCadastrarTodos.Enabled = false;
             MessageBox msg = new MessageBox("Cadastro Realizado Com Sucesso");
-            //TratamentoAudio.playQuemEsse();
+            TratamentoAudio.playQuemEsse();
             msg.ShowDialog();
             
         }
