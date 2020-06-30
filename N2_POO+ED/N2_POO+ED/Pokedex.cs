@@ -236,9 +236,9 @@ namespace N2_POO_ED
         private void btnAndar_Click(object sender, EventArgs e)
         {
             ptbAnimal.BringToFront();
-            BloquearBotoes();
             posicaoInicial = ptbAnimal.Location;
             tmrMovimentar.Enabled = true;
+            BloquearBotoes();
         }
 
         private void tmrMovimentar_Tick(object sender, EventArgs e)
@@ -382,6 +382,7 @@ namespace N2_POO_ED
 
         private void btnFalar_Click(object sender, EventArgs e)
         {
+            BloquearBotoes();
             ptbBalao.Controls.Add(lblNome);
             ptbBalao.Visible = true;
             lblNome.Location = new Point(ptbBalao.Location.X - 10, ptbBalao.Location.Y + 15);
@@ -439,7 +440,7 @@ namespace N2_POO_ED
                     descer = true;
                     contadorMovimento = 0;
                 }
-                else
+                else if (voltar && lado && descer)
                 {
                     ptbAnimal.Location = posicaoInicial;
                     lado = false;
