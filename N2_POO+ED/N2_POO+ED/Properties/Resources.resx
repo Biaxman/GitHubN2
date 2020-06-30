@@ -118,14 +118,32 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Andar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\Andar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="AtaqueOnda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\AtaqueOnda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Autofalante" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\Autofalante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="balaoFala" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\balaoFala.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Berry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\Berry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Berry2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\Berry2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bravary2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\bravary2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ducklett" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\ducklett.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="espada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\espada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FundoAgua" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\FundoAgua.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,11 +160,26 @@
   <data name="herdier2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\herdier2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Iconeasa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\Iconeasa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_03_twitter_104501" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\iconfinder_03-twitter_104501.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kisspng_columbidae_bird_clip_art_black_dove_cliparts_5a76376ade2664_2566370015176968749099" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\kisspng-columbidae-bird-clip-art-black-dove-cliparts-5a76376ade2664.2566370015176968749099.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="komala" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\komala.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lancaChamas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\lancaChamas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lancaChamas__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\lancaChamas (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mamadeira" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\mamadeira.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Ninho" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\Ninho.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -183,7 +216,7 @@
         AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
         cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
         b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
-        AQEBCQIAAAAAAAAAAAAAALBOCwCwTgsAAAEAAQoPAgAAALBOCwACUklGRqhOCwBXQVZFZm10IBAAAAAB
+        AQEBCQIAAAAAAAAAsE4LALBOCwCwTgsAAAEAAQoPAgAAALBOCwACUklGRqhOCwBXQVZFZm10IBAAAAAB
         AAIARKwAABCxAgAEABAATElTVGwAAABJTkZPSUFSVBAAAABHcmF2YWRvciBkZSBWb3oASU5BTRgAAABN
         aXggYnkgYXVkaW8tam9pbmVyLmNvbQBJU0ZUDgAAAExhdmY1OC40NS4xMDAASVRDSBEAAABhdWRpby1q
         b2luZXIuY29tAABkYXRhEE4LAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA

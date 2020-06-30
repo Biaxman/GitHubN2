@@ -55,7 +55,13 @@ namespace N2_POO_ED
         }
         public override string ToString()
         {
-            return "Nome: " +Nome+ "\nIdade: "+Idade(DatadeNascimento).ToString()+"\nSexo: "+ SexoTexto();
+            StringBuilder s = new StringBuilder();
+            s.AppendLine("Nome: " + Nome);
+            s.AppendLine("Data Nasc.: " + DatadeNascimento.ToShortDateString());
+            s.AppendLine("Peçonhento: " + (Peconhento? "Sim" : "Não"));
+            s.AppendLine("Carnívoro: " + (Carnivoro ? "Sim" : "Não"));
+
+            return s.ToString();
         }
     }
 

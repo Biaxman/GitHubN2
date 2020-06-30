@@ -100,5 +100,10 @@ namespace N2_POO_ED.Animais
                 aguaDoce = true;
             }
         }
+
+        public override string ToString()
+        {
+            return base.ToString() + "Espécie:" + this.GetType().Name;
+        }
     }
 }

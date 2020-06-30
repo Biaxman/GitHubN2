@@ -18,6 +18,10 @@ namespace N2_POO_ED.Animais
             CorPelo = "Cinza";
         }
 
+        public override string ToString()
+        {
+            return base.ToString() + "Espécie:" + this.GetType().Name;
+        }
 
     }
 }

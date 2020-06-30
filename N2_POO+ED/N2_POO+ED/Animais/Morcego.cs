@@ -51,5 +51,10 @@ namespace N2_POO_ED.Animais
             Console.WriteLine("voar");
         }
 
+        public override string ToString()
+        {
+            return base.ToString() + "Espécie:" + this.GetType().Name;
+        }
+
     }
 }

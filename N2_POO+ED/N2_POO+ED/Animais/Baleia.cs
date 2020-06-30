@@ -68,12 +68,7 @@ namespace N2_POO_ED.Animais
 
         public override string ToString()
         {
-            StringBuilder s = new StringBuilder();
-            s.AppendLine("Espécie: Baleia");
-            s.AppendLine("Nome: " + Nome);
-            s.AppendLine("Data Nasc.: " + DatadeNascimento.ToShortDateString());
-
-            return s.ToString();
+            return base.ToString() + "Espécie:" + this.GetType().Name;
         }
     }
 }

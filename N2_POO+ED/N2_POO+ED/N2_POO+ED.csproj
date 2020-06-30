@@ -164,20 +164,32 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Imagens\Andar.png" />
     <Content Include="Imagens\AtaqueOnda.png" />
+    <Content Include="Imagens\Autofalante.png" />
+    <Content Include="Imagens\balaoFala.png" />
+    <Content Include="Imagens\Berry.png" />
+    <Content Include="Imagens\Berry2.png" />
     <Content Include="Imagens\bravary2.png" />
     <Content Include="Imagens\ducklett.png" />
+    <Content Include="Imagens\espada.png" />
     <Content Include="Imagens\FundoAgua.png" />
     <Content Include="Imagens\FundoGrama.png" />
     <Content Include="Imagens\glameow.png" />
     <Content Include="Imagens\golbat.png" />
     <Content Include="Imagens\herdier2.png" />
+    <Content Include="Imagens\Iconeasa.png" />
+    <Content Include="Imagens\iconfinder_03-twitter_104501.png" />
+    <Content Include="Imagens\kisspng-columbidae-bird-clip-art-black-dove-cliparts-5a76376ade2664.2566370015176968749099.jpg" />
     <Content Include="Imagens\komala.png" />
+    <None Include="Imagens\lancaChamas %282%29.png" />
     <Content Include="Imagens\lancaChamas.png" />
+    <Content Include="Imagens\mamadeira.png" />
     <Content Include="Imagens\Ninho.png" />
     <Content Include="Imagens\noctowl.png" />
     <Content Include="Imagens\ovo.png" />
     <Content Include="Imagens\pedolv.png" />
+    <Content Include="Imagens\pngwing.com_1.png" />
     <Content Include="Imagens\PokedexDefinitiva.jpg" />
     <Content Include="Imagens\PokedexTerra.png" />
     <Content Include="Imagens\PokedexTestMinimalista.png" />

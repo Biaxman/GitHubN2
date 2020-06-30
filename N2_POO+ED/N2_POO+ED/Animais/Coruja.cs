@@ -67,5 +67,10 @@ namespace N2_POO_ED.Animais
         {
             Console.WriteLine("Chocou um ovo, é um milagre");
         }
+
+        public override string ToString()
+        {
+            return base.ToString() + "Espécie:" + this.GetType().Name;
+        }
     }
 }
