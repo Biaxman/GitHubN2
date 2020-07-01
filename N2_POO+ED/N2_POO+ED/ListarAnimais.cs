@@ -96,11 +96,14 @@ namespace N2_POO_ED
 
         private void cbxListagem_SelectedValueChanged(object sender, EventArgs e)
         {
-            string animal = cbxListagem.SelectedItem.ToString().Substring(0, cbxListagem.SelectedItem.ToString().IndexOf(" "));
-            Animal a = VariavelGlobal.arvore.PesquisarPorNome(animal);
-            metodoDelegado(a);
-        }
+            if(cbxListagem.SelectedItem.ToString() != "")
+            {
+                string animal = cbxListagem.SelectedItem.ToString().Substring(0, cbxListagem.SelectedItem.ToString().IndexOf(" "));
+                Animal a = VariavelGlobal.arvore.PesquisarPorNome(animal);
+                metodoDelegado(a);
+            }
 
+        }
         private void cbxListagem_SelectedIndexChanged(object sender, EventArgs e)
         {
 
